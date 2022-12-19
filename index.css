@@ -116,7 +116,6 @@ td{
         border: 3px solid rgb(150, 129, 9);
     }
 
-
     .troisD img {
         height: 100%;
         width: 27%;
@@ -147,9 +146,54 @@ td{
         background-repeat: no-repeat;
   
       }
-      #j2 , #j1 , #pot ,#jetonj1 , #jetonj2 , .couleurpot , .textTour, #tour{
+       #j1 , #pot ,#jetonj1 , #jetonj2 , .couleurpot , .textTour, #tour{
         color:red ;
-  
       }
+      #j2{
+        color: blue;
+      }
+      #inputJ1 , #inputJ2{
+        padding: 0.5rem;
+        border-radius: 2rem;
+        width: 15rem;
+        
+      }
+      #inputJ1{
+  color: red;
+      }
+      #inputJ2{
+  color: blue;
+      }
+      #inputJ1::placeholder{
+        text-align: center;
+        color: red;
+      }
+      #inputJ2::placeholder{
+        text-align: center;
+        color: blue;
+      }
+      #inputJ1:hover{
+        background-color: rgb(244, 179, 179);
+      }
+      #inputJ2:hover{
+        background-color: rgb(115, 115, 248);
+      }
+  
+      #pseudoVainqueur2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+      }
+      .imgcouronne{
+        position: relative;
+      }
+  #troisDBleu ,#troisDRouge {
+    visibility: hidden;
+  }
+  .modal-content{
+    border-radius: 2rem;
+  }
+  
   
 /*# sourceMappingURL=index.css.map */

@@ -839,50 +839,59 @@
                             </div>
                             <div class="tab-pane container-fluid " id="installationUbuntu">
                              
-<h1 class="text-center mb-5 police"> -Installations d'un environement de travail de A-Z</h1>
+<h1 class="text-center mb-5 police"> -Installation d'un environnement de travail d'A-Z</h1>
 
 
-<p class="my-3 police"> Tout dabord assurez-vous que la virtualisation est activée dans le BIOS et que votre windows est bien a jour afin de pouvoir faire fonctionner WSL 2 : </p>
+<p class="my-3 police">-Tout d'abord, assurez-vous que la virtualisation est activée dans le BIOS et que votre Windows est bien à jour afin de pouvoir faire fonctionner WSL 2 ; </p>
 <div class=" d-flex justify-content-center"><img class="img-fluid img-tuto" src="img/tuto installation wsl ubuntu/img.png" alt=""></div>
-<h2 class="my-5 text-center police">- Nous allons ensuite pouvoir telecharger wsl et ubuntu depuis Microsoft store</h2>
+<h2 class="my-5 text-center police">-Nous allons ensuite pouvoir télécharger wsl et Ubuntu depuis Microsoft store.
+</h2>
 <div class="row">
   <div class="col-6"><img class="img-fluid img-tuto2" src="img/tuto installation wsl ubuntu/img2.png" alt=""></div>
   <div class="col-6"><img class="img-fluid img-tuto2" src="img/tuto installation wsl ubuntu/img3.png" alt=""></div>
 </div>
-<h2 class="my-5 police text-center">-Lancer ubuntu et taper c'est commande </h2>
-<strong><p class="mb-3 police">Si jamais il ne fonctionne pas verifier , que votre systeme est bien  a jour , que les 3 cases sont bien cocher et que la virtualisation est activée dans le BIOS ! </p></strong>
+<h2 class="my-5 police text-center">- Lancez Ubuntu et tapez cette commande </h2>
+<strong><p class="mb-3 police">- Si jamais il ne fonctionne pas, vérifiez que votre système est bien à jour, que les 3 cases sont bien cochées et que la virtualisation est activée dans le BIOS !
+</p></strong>
 <p class="bg-secondary bg-gradient text-white p-2">sudo apt update</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">sudo apt upgrade</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">sudo apt install mysql-server</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">sudo service mysql start	</p>
-<strong><p class="my-3 police">la comme vous venez de la voir nous venons d'intaller et lancer Mysql , continuons</p></strong>
+<strong><p class="my-3 police">- Comme vous venez de la voir nous venons d'installer et lancer Mysql, continuons :
+</p></strong>
 <p class="bg-secondary bg-gradient text-white p-2">sudo apt install php8.1	</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">sudo apt install php8.1-fpm php8.1 php8.1-common php8.1-mysql php8.1-xml php8.1-xmlrpc php8.1-curl php8.1-gd php8.1-imagick php8.1-cli php8.1-imap php8.1-mbstring php8.1-opcache php8.1-soap php8.1-zip php8.1-intl php8.1-bcmath unzip -y	</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">sudo service php8.1-fpm start	</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">sudo service php8.1-fpm status	</p>
-<strong><p class="my-3 police">nous venons d'intaller et lancer php8.1</p></strong>
+<strong><p class="my-3 police">- Nous venons d'installer et lancer php8.1</p></strong>
 <p class="bg-secondary bg-gradient text-white p-2">sudo apt install nginx	</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">sudo service nginx start	</p>
-<strong><p class="my-3 police">nous venons d'intaller et lancer nginx , nous allons maintenant generer une paire de clés ssh et  deposer la clé publique  sur git hub 	</p></strong>
+<strong><p class="my-3 police">- Nous venons d'installer et lancer nginx, nous allons maintenant générer une paire de clés ssh et déposer la clé publique sur github : 
+</p></strong>
 <p class="bg-secondary bg-gradient text-white p-2">ssh-keygen	</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">cd /home/"Nomutilisateur"/.ssh	</p> <br>
 <p class="bg-secondary bg-gradient text-white p-2">cat id_rsa.pub	</p>
-<strong><p class="mt-3 police">cette commande permet dafficher votre clef publique ( changer le nom de la clés si jamais vous l'avez nommés autrement ) copier la dans votre git hub ou dans votre git lab , dans parametres clés ssh </p>
-<p class="mb-3 police">il va falloir maintenant vous connecter en mode super agent sur ubuntu afin d'autoriser la clés</p></strong>
+<strong><p class="mt-3 police">- cette commande permet d'afficher votre clé publique ( changer le nom de la clé si jamais vous l'avez nommé autrement) copier là dans votre git hub ou dans votre git lab, dans paramètres clés ssh </p>
+<p class="mb-3 police">il va falloir maintenant vous connecter en mode super agent sur Ubuntu afin d'autoriser la clé
+</p></strong>
 <p class="bg-secondary bg-gradient text-white p-2">sudo su</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">cd</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">eval "$(ssh-agent -s)"</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">ssh-add /home/florian/.ssh/id_rsa</p>
 <h3 class="my-4 police">Maintenant nous allons modifier le fichier host de windows et configurer notre futur serveur </h3>
-<p class="my-4 police">ouvrir votre bloc note en mode adminnistrateur et ouvrez le fichier host situer dans <strong class="bg-secondary bg-gradient text-white p-2"> C:\Windows\System32\drivers\etc</strong></p>
+<p class="my-4 police">- ouvrir votre bloc note en mode administrateur et ouvre le fichier host situer dans
+  <strong class="bg-secondary bg-gradient text-white p-2"> C:\Windows\System32\drivers\etc</strong></p>
 <div class=" d-flex justify-content-center"><img class="img-fluid img-tuto" src="img/tuto installation wsl ubuntu/img4.png" alt=""></div>
-<strong><p class="my-4 police"> puis rentrer 127.0.0.1 suivis du nom de votre domaine</p></strong>
+<strong><p class="my-4 police"> - puis rentrer 127.0.0.1 suivi du nom de votre domaine
+</p></strong>
 <div class=" d-flex justify-content-center"><img class="img-fluid img-tuto" src="img/tuto installation wsl ubuntu/img5.png" alt=""></div>
-<strong><p class="my-4 police">maintenant retournons sur ubuntu nous allons crer un fichier qui permetra de faire fonctionner le serveur nginx </p></strong>
+<strong><p class="my-4 police">- maintenant retournons sur Ubuntu nous allons créer un fichier qui permettra de faire fonctionner le serveur nginx
+</p></strong>
 <p class="bg-secondary bg-gradient text-white p-2">cd /etc/nginx/sites-available</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">vi "monprojet" ici en locurence sudo vi 123des.fr</p>
-<p class="police"> faite  <strong class="bg-secondary bg-gradient text-white p-2">i</strong>  puis inserez tous se text </p>
-<textarea class="textareaServer" name="" id="" cols="120" rows="20">
+<p class="police"> faite  <strong class="bg-secondary bg-gradient text-white p-2">i</strong>  puis insérez tous ce texte
+</p>
+<textarea class="textareaServer" name="" id="" cols="80" rows="20">
   
 server {
   server_name 123des.fr;
@@ -935,16 +944,18 @@ server {
                               access_log /var/log/nginx/1clique1service_access.log;
 }
 </textarea>
-<p class="my-3 police">un fois copier faite echap suivis de <strong class="bg-secondary bg-gradient text-white p-2">:wq</strong> </p>
+<p class="my-3 police">- une fois copié faite echap suivi de 
+  <strong class="bg-secondary bg-gradient text-white p-2">:wq</strong> </p>
 <p class="bg-secondary bg-gradient text-white p-2">ln -s /etc/nginx/sites-available/123des.fr /etc/nginx/sites-enabled/</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">/etc/init.d/nginx reload</p>
-<strong><h3 class="my-3 police">maintenant nous allons devoir debloquer des droits a certains de nos fichiers afin de pouvoir les modifiers et sauvegarder </h3></strong>
+<strong><h3 class="my-3 police">- maintenant nous allons devoir débloquer des droits à certains de nos fichiers afin de pouvoir les modifiers et sauvegarder
+</h3></strong>
 <p class="bg-secondary bg-gradient text-white p-2">chown -R utilisateur:utilisateur /home</p>
 <h2 class="text-center police my-4">Installation de ZSH</h2>
 <p class="bg-secondary bg-gradient text-white p-2">sudo apt install zsh</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">chsh -s $(which zsh)</p><br>
 <p class="bg-secondary bg-gradient text-white p-2">sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</p><br>
-<strong><p>  vous pouvez ausii choisir un theme <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" target="_blank">ici</a> et le changer via cette commande </p></strong>
+<strong><p>  vous pouvez aussi choisir un theme <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" target="_blank">ici</a> et le changer via cette commande </p></strong>
 <p class="bg-secondary bg-gradient text-white p-2">vi .zshrc</p><br>
 <div class=" d-flex justify-content-center my-5"><img class="img-fluid img-tuto" src="img/tuto installation wsl ubuntu/img6.png" alt=""></div>
 

@@ -205,7 +205,7 @@ function resultatexo4p7f(){
 }
  // jeux 421  
 
-const combinaison = [
+ const combinaison = [
 	421, 111, 611, 666, 511, 555, 411, 444, 311, 333, 211, 222, 654, 543, 432,
 	321,
   ];
@@ -230,11 +230,10 @@ const combinaison = [
   
   const tableauJeton = ["jetonPot", "jetonJ1", "jetonJ2"];
   var tableauJeton_Nombre = {
-	jetonPot: 21,
+	jetonPot: 7,
 	jetonJ1: 0,
 	jetonJ2: 0,
   };
-  
   var nbrTour = 1;
   var combinaisonJ1;
   var combinaisonJ2;
@@ -269,8 +268,9 @@ const combinaison = [
 	}
   }
   
-  // fonction qui permet de lancer la fonction attribution_face_rouge en lui indiquant le numero random , l'emplacement et la face du dés correspondant //
+  // fonction qui permet de lancer la fonction attribution_face_rouge en lui indiquantdocument.getElementById("troisDRouge").style.visibility = "visible"; le numero random , l'emplacement et la face du dés correspondant //
   function affichage1(tableauLancer) {
+	affichageDes[0].style.visibility = "visible";
 	attribution_face_rouge(tableauLancer[0], "d1", tableauImgFaceRouge);
 	attribution_face_rouge(tableauLancer[1], "d2", tableauImgFaceRouge);
 	attribution_face_rouge(tableauLancer[2], "d3", tableauImgFaceRouge);
@@ -285,7 +285,6 @@ const combinaison = [
 	5: "img/face5dbleu.png",
 	6: "img/face6dbleu.png",
   };
-  
   // fonction qui verifie que la valeur est bien comprise entre 1 et 6 et que c'est bien un nombre entier pour ensuite afficher les faces a la partie html //
   function attribution_face_bleu(valeur, emplacement, tableauImgFaceBleu) {
 	if (
@@ -297,13 +296,12 @@ const combinaison = [
 	  document.getElementById(emplacement).style.display = "none";
 	}
   }
-  
   function affichage2(tableauLancer) {
+	affichageDes[1].style.visibility = "visible";
 	attribution_face_bleu(tableauLancer[0], "d4", tableauImgFaceBleu);
 	attribution_face_bleu(tableauLancer[1], "d5", tableauImgFaceBleu);
 	attribution_face_bleu(tableauLancer[2], "d6", tableauImgFaceBleu);
   }
-  
   function lancer_de6(joueurQuiJoue, joueurPerdant, tableauLancer) {
 	var tableauLancer = [random_d6(), random_d6(), random_d6()];
   
@@ -313,7 +311,9 @@ const combinaison = [
 		ordre_combinaison_J1(tableauLancer);
 		if (joueurPerdant == 2) {
 		  jeu_421();
-		} else {
+		
+		} else {  
+		  griserCaseJoueur1();
 		  document.getElementById("lancer1").disabled = true;
 		  document.getElementById("lancer2").disabled = false;
 		}
@@ -323,14 +323,15 @@ const combinaison = [
 		ordre_combinaison_J2(tableauLancer);
 		if (joueurPerdant == 1) {
 		  jeu_421();
+		  
 		} else {
+		  griserCaseJoueur2()
 		  document.getElementById("lancer1").disabled = false;
 		  document.getElementById("lancer2").disabled = true;
 		}
 		break;
 	}
   }
-  
   // cette fonction determine si nous sommes en phase une ou en phase deux //
   function phase() {
 	if (tableauJeton_Nombre["jetonPot"] != 0) {
@@ -352,7 +353,6 @@ const combinaison = [
 	combinaisonJ1 = Number(combinaisonJ1String);
 	return combinaisonJ1;
   }
-  
   //Cette fonction met en ordre décroisant la combi du j2//
   function ordre_combinaison_J2(tableauLancer) {
 	var tableauIntermediaireJ2 = [];
@@ -364,7 +364,6 @@ const combinaison = [
 	combinaisonJ2 = Number(combinaisonJ2String);
 	return combinaisonJ2;
   }
-  
   // cette fonction attend en entrer la combinaison gagnante et ressort sa valeur en jetons //
   function conversion_en_jeton(resultatTour) {
 	if (resultatTour == "matchnul") {
@@ -378,7 +377,6 @@ const combinaison = [
 	}
 	return valeurEnJetonCombinaisonGagnante;
   }
-  
   //cette fonction change la variable joueurperdant en fonction du resultat du tour//
   function joueur_qui_perd(resultatTour) {
 	if (resultatTour == "matchnul") {
@@ -392,7 +390,6 @@ const combinaison = [
 	}
 	return joueurPerdant;
   }
-  
   // Cette fonction attend deux nombres en entrée (combij1 et combij2) et ressort la combinaison gagnante en sortie dans la variable resultatTour//
   function compare_combinaison(combinaisonJ1, combinaisonJ2) {
 	if (combinaisonJ2 == combinaisonJ1) {
@@ -421,7 +418,6 @@ const combinaison = [
 	joueur_qui_perd(resultatTour);
 	return resultatTour;
   }
-  
   //Cette fonction attend en entrée le numero de la phase (1 ou 2), la valeur en jeton de la combinaison gagnante ainsi que le numéro du joueur (1 ou 2) devant recevoir les jetons
   function distribution(
 	numPhase,
@@ -488,24 +484,27 @@ const combinaison = [
   
 	return tableauJeton_Nombre;
   }
-  
+  let winners = "";
   function win(tableauJeton_Nombre) {
 	if (
 	  tableauJeton_Nombre["jetonPot"] == 0 &&
 	  tableauJeton_Nombre["jetonJ1"] == 0
 	) {
-	  new bootstrap.Modal(document.getElementById("myModal"), []).show();
+	  winners = speudoJoueur1;
+	  modalJoueurgagnant()
+	  return winners;
 	} else if (
 	  tableauJeton_Nombre["jetonPot"] == 0 &&
 	  tableauJeton_Nombre["jetonJ2"] == 0
 	) {
-	  new bootstrap.Modal(document.getElementById("myModal2"), []).show();
+	  winners = speudoJoueur2;
+	  modalJoueurgagnant()
+	  return winners;
 	} else {
 	  nbrTour++;
 	}
   }
-  
-  //Cette fonction indique le nbr maximum de lancé a effectuer pour le 2eme joueur dans la phase 2/
+  //Cette fonction indique le nbr maximum de lancé a effectuer pour le 2eme joueur dans la phase 2/*
   function compte_nombre_lancer_en_phase2() {
 	var phase2lancerJ2;
 	switch (phase2lancerJ1) {
@@ -522,12 +521,84 @@ const combinaison = [
 		break;
 	}
   }
+  // demande le speudo du joueur 1 et 2 et l'afficher //
+  let speudoJoueur1 = "";
+  let speudoJoueur2 = "";
+  function attribuerLesSpeudo() {
+	speudoJoueur1 = document.getElementById("inputJ1").value;
+	speudoJoueur2 = document.getElementById("inputJ2").value;
+	document.getElementById("j1").innerHTML = speudoJoueur1.toUpperCase();
+	document.getElementById("j2").innerHTML = speudoJoueur2.toUpperCase();
+  }
+  // fonction reset score jour 1 et 2 et reset du pot tour et tour
+  function resetScore() {
+	tableauJeton_Nombre["jetonPot"] = 7;
+	tableauJeton_Nombre["jetonJ1"] = 0;
+	tableauJeton_Nombre["jetonJ2"] = 0;
+	nbrTour = 1;
+	phase();
+	cacherButtonPhase2()
+  }
+  // fonction affichant le joueur gagnat accompagner d'une petite animation //
+  const ring = () => {
+	const audio = new Audio();
+	audio.src = "mp3/win.mp3";
+	audio.play();
+  }
+  function modalJoueurgagnant() {
+	document.getElementById("pseudoVainqueur").innerHTML = winners.toUpperCase();
+	new bootstrap.Modal(document.getElementById("joueurGagant"), []).show();
+	ring();
+  
+  }
+  // cacher les des au chargement de la page ils seront ensuite re afficher dans la fonction affichage 1 et 2
+  const affichageDes = {
+	0: document.getElementById("troisDRouge"),
+	1: document.getElementById("troisDBleu"),
+  };
+  // cacher les bouton au chargement de la page ils seront ensuite re afficher a la phase 2
+  
+  const affichageButtonP2 = {
+	0: document.getElementById("finTourJ1"),
+	1: document.getElementById("relancerJ1"),
+	2: document.getElementById("finTourJ2"),
+	3: document.getElementById("relancerP2"),
+  }
+  function cacherButtonPhase2() {
+	affichageButtonP2[0].style.visibility = "hidden";
+	affichageButtonP2[1].style.visibility = "hidden";
+	affichageButtonP2[2].style.visibility = "hidden";
+	affichageButtonP2[3].style.visibility = "hidden";
+  }
+  function afficherButtonPhase2() {
+	affichageButtonP2[0].style.visibility = "visible";
+	affichageButtonP2[1].style.visibility = "visible";
+	affichageButtonP2[2].style.visibility = "visible";
+	affichageButtonP2[3].style.visibility = "visible";
+  }
+  function griserCaseJoueur1() {
+	if (numPhase == 2) {
+	  affichageButtonP2[0].style.visibility = "hidden";
+	  affichageButtonP2[1].style.visibility = "hidden";
+	  affichageButtonP2[2].style.visibility = "visible";
+	  affichageButtonP2[3].style.visibility = "visible";
+	}
+  }
+  function griserCaseJoueur2(){
+	if (numPhase == 2) {
+	  affichageButtonP2[0].style.visibility = "visible";
+	  affichageButtonP2[1].style.visibility = "visible";
+	  affichageButtonP2[2].style.visibility = "hidden";
+	  affichageButtonP2[3].style.visibility = "hidden";
+	}
+  }
+  
   
   function start_game() {
-	let j1 = prompt("Saisir le nom du joueur 1: ");
-	let j2 = prompt("Saisir le nom du joueur 2 :");
-	document.getElementById("j1").innerHTML = j1.toUpperCase();
-	document.getElementById("j2").innerHTML = j2.toUpperCase();
+	resetScore();
+	affichageDes[0].style.visibility = "hidden";
+	affichageDes[1].style.visibility = "hidden";
+	new bootstrap.Modal(document.getElementById("ModalDemandeSpeudo"), []).show();
 	document.getElementById("start").innerHTML = "Reset";
 	document.getElementById("pot").innerHTML = tableauJeton_Nombre["jetonPot"];
 	document.getElementById("jetonj1").innerHTML = tableauJeton_Nombre["jetonJ1"];
@@ -554,11 +625,26 @@ const combinaison = [
 	if (joueurPerdant == 2) {
 	  document.getElementById("lancer1").disabled = true;
 	  document.getElementById("lancer2").disabled = false;
+	  griserCaseJoueur1();
 	} else {
+	  griserCaseJoueur2();
 	  document.getElementById("lancer1").disabled = false;
 	  document.getElementById("lancer2").disabled = true;
 	}
   
 	win(tableauJeton_Nombre);
   }
+  
+   /* cree une fonction qui autorise jusqua 3 lancer pour premier lanceur en phase 2 
+  let nombredelancer = 0;
+  var scorePremierTireur = [random_d6(), random_d6(), random_d6()];
+   function joueurPerdantPhase2(){
+	
+  if(nombredelancer <= 3 && numPhase == 2){
+	
+	affichage1(scorePremierTireur);
+  }
+  
+   }*/
+  
   

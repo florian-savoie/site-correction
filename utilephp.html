@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="index.css">
+	<title>florian savoie</title>
+</head>
+
+<body>
+
+
+	<nav class="navbar navbar-expand-lg">
+		<div class="container-fluid">
+			
+			<a class="navbar-brand ms-4" href="#"><h2>utile php</h2></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse me-3" id="navbarNav">
+				<ul class="navbar-nav ms-md-auto gap-2">
+                    <li class="nav-item rounded">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i
+                                class="bi bi-house-fill me-2"></i>HTML</a>
+                    </li>
+                    <li class="nav-item rounded">
+                        <a class="nav-link" href="css.html"><i class="bi bi-people-fill me-2"></i>CSS</a>
+                    </li>
+
+                    <li class="nav-item dropdown rounded">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="bi bi-person-fill me-2"></i>JAVASCRIPT</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="utilejs.html">utile javascript</a></li>
+                            <li><a class="dropdown-item" href="javascriptcorrection.html">correction exercices</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown rounded">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false"><i
+                              class="bi bi-person-fill me-2"></i>PHP</a>
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="utilephp.html">utile PHP</a></li>
+                          <li><a class="dropdown-item" href="correctionphp.html">correction exercices</a></li>
+
+                      </ul>
+                  </li>
+                    <li class="nav-item rounded">
+                        <a class="nav-link" href="linux.html"><i class="bi bi-telephone-fill me-2"></i>LINUX / GIT</a>
+                    </li>
+                    <li class="nav-item rounded">
+                      <a class="nav-link" href="jeux.html"><i class="bi bi-telephone-fill me-2"></i>jeux</a>
+                  </li>
+                </ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+	<div class="container-fluid blockPrincipal my-5">
+		<div class="row p-3">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link " data-bs-toggle="tab" href="#Utilephp">utile PHP</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu1"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu2"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " data-bs-toggle="tab" href="#menu3"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu4"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu5"></a>
+              </li>
+            </ul>
+          
+              <!-- Tab panes -->
+              <div class="tab-content container active">
+               
+                <!--    partie linux    -->
+                 <div class="tab-pane container-fluid" id="Utilephp">
+                    <div class="row">
+                
+                        <ul class="nav nav-pills container-fluid col-sm-12 col-lg-2 flex-column p-3">
+                            <li class="nav-item ">
+                              <a class="nav-link " data-bs-toggle="pill" href="#rappel">rappel php</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="pill" href="#commandeutilelinux">commande utile linux</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="pill" href="#menu2">Menu 2</a>
+                            </li>
+                          </ul>
+                          
+                          <!-- Tab panes -->
+                          <div class="tab-content  col-sm-12 col-lg-10">
+                            
+                            <div class="tab-pane container fade" id="rappel"><div class="container mt-3">
+                              <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>Commande</th>
+                                    <th>Description</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="50" rows="1">echo "<p>Hello World !</p>";</textarea></td>
+                                    <td>echo permet d'écrire hello word</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="50" rows="1"> <?= "Salut"; ?> </textarea></td>
+                                    <td>Cette façon d'écrire permet de faire un echo plus simplement</td>
+                                  </tr>
+                                  <tr>
+                                    <td>$nomVariable</td>
+                                    <td>$ permet de declarer une variable</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">echo gettype($nomVariable) . "<br>";</textarea></td>
+                                    <td> afficher le type de variable</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">define("nomConstante", "Marseille");</textarea></td>
+                                    <td>definir une constante et lui attibuer une valeur</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">echo "coucou" . ", " . "ça va ?" . "<br>";</textarea></td>
+                                    <td> la concactenation peut se faire avec un point en php contraiement a un + en js</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">echo $fruit = ($nomVariable > 5) ? "mangue" : "orange";</textarea></td>
+                                    <td> if else syntaxe rapide  , if mangue : else "orange" </td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">if ($beau AND $riche){</textarea> </td>
+                                    <td>Le "ET" - On peut utiliser AND ou &&</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">if ($beau OR $riche){</textarea></td>
+                                    <td>le "OU" - On peut utiliser OR ou ||</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">if ($beau XOR $riche){</textarea></td>
+                                    <td>Le "OU" exclusif / une seule condition est juste</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">global $nomVariable;</textarea></td>
+                                    <td>Je demande a aller chercher la variable $compteur depuis l'espace globale, et de l'amener dans l'espace local</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">echo strlen($nomVariable)</textarea></td>
+                                    <td>la function strlen permet de connaitre la longueur d'une chaine de caractère</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">isset()</textarea></td>
+                                    <td>isset — Détermine si une variable est déclarée et est différente de null</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">empty()</textarea></td>
+                                    <td>renvoie vrai si la variable est vide , faux si elle contient quelque chose</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">$listePrenom1 = array("Myckael", "Antoine", "Samir", "Jean-Christophe", "Evan");</textarea></td>
+                                    <td>1 façons de creer une tableau</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">$listePrenom2 = ["Christiane", "David", "Sarah", "Lucia", "Alexis"];</textarea></td>
+                                    <td>1 façons de creer une tableau</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">print_r($listePrenom1);</textarea></td>
+                                    <td>1 façons de visualiser une tableau</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">var_dump($listePrenom2);</textarea></td>
+                                    <td>1 façons de visualiser une tableau</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">$listePrenom2[] = "Cecilia";</textarea></td>
+                                    <td>1 façons d'ajouter un élément a la fin d'une liste</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">array_push($listePrenom2, "Lucia", "Khalid");</textarea></td>
+                                    <td>2 façons d'ajouter un élément a la fin d'une liste</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">$color = ["Rouge" => "ff0000", "Vert" => "00ff00", "Bleu" => "0000ff", "Noir" => "000000", "Blanc" => "ffffff"];
+                                    </textarea></td>
+                                    <td>Tableau associatif cles valeur </td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">$nombre1 = $_GET["nombre"];</textarea></td>
+                                    <td>recupere la valeur de l'input contenant le name="nombre" </td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">include("inc/head.inc.php"); </textarea></td>
+                                    <td>include permet d'importer le code d'un autre fichier directement a l'endroit voulu</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1"> include_once("inc/header.inc.php");</textarea></td>
+                                    <td>include_once permet de s'assurer que l'importation n'ai lieu qu'une seule fois</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">$fichier = file("historique.txt");</textarea></td>
+                                    <td>Lire un fichier texte</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1">session_start() </textarea></td>
+                                    <td> Appeler la fonction session_start() Attention, session_start dois être appelé dans chaque page ou la $_SESSION est utilisé</td>
+                                  </tr>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="70" rows="1"></textarea></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div></div>
+                            <div class="tab-pane container fade" id="menu2">...</div>
+                          </div>
+                
+                
+                
+                    </div>
+                
+                
+                                </div>
+                              </div>
+          </div>
+          
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<footer id="footer" class="top-space">
+
+
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row pt-3">
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a class="lien_nav" href="index.html">HTML</a> |
+                                <a class="lien_nav" href="css.html">CSS</a> |
+                                <a class="lien_nav" href="javascriptcorrection.html">JAVASCRIPT</a> |
+                                <a class="lien_nav" href="php.html">PHP</a> |
+                                <a class="lien_nav" href="linux.html">LINUX</a>
+                                <a class="lien_nav" href="jeux.html">LINUX</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right ">
+								Copyright &copy; 2022,  Designed by <a class="lien_nav2"
+                                href="https://florian-savoie.github.io/mon-cv/" rel="designer">Florian Savoie</a>
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="index.js"></script>
+
+</body>
+
+</html>
