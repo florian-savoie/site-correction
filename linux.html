@@ -499,7 +499,9 @@
                             <li class="nav-item">
                               <a class="nav-link" data-bs-toggle="pill" href="#installationUbuntu">installation environement de travail de A-Z</a>
                             </li>
-                          
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="pill" href="#installationCodeigniter">installation Composer + Codeigniter</a>
+                            </li>
                           </ul>
                           
                           <!-- Tab panes -->
@@ -896,7 +898,7 @@
 <p class="bg-secondary bg-gradient text-white p-2">vi "monprojet" ici en locurence sudo vi 123des.fr</p>
 <p class="police"> faite  <strong class="bg-secondary bg-gradient text-white p-2">i</strong>  puis insérez tous ce texte
 </p>
-<textarea class="textareaServer" name="" id="" cols="80" rows="20">
+<textarea class="textareaServer" name="" id="" cols="100" rows="20">
   
 server {
   server_name 123des.fr;
@@ -966,6 +968,111 @@ server {
 
 
                             </div>
+                            <div class="tab-pane container-fluid " id="installationCodeigniter">
+                             
+                              <h1 class="text-center mb-5 police"> -Installation de Compiler + Codeigniter</h1>
+                              
+                              
+                              <p class="my-3 police">-Tout d'abord nous allons installer Compiler via c'est commande </p>
+                              <p>Assurez-vous d'être dans votre répertoire personnel, puis récupérez le programme d' installation de Composer en
+                                utilisant curl :</p>
+                              <p class="bg-secondary bg-gradient text-white p-2">cd</p><br>
+                              <p class="bg-secondary bg-gradient text-white p-2">curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+                              </p><br>
+                              <p>Ensuite, nous vérifierons que le programme d'installation téléchargé correspond au hachage SHA-384 du dernier
+                                programme d'installation trouvé sur la page Composer Public Keys / Signatures .
+                              
+                                À l' aide curlde , récupérez la dernière signature et stockez-la dans une variable shell :</p>
+                              <p class="bg-secondary bg-gradient text-white p-2">HASH=`curl -sS https://composer.github.io/installer.sig`</p><br>
+                              <p>Exécutez maintenant le code PHP suivant pour vérifier que le script d'installation peut être exécuté en toute
+                                sécurité :</p>
+                              <p class="bg-secondary bg-gradient text-white p-2">php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') ===
+                                '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo
+                                PHP_EOL;"
+                              </p><br>
+                              <p>Vous verrez le résultat suivant :</p>
+                              <p class="bg-secondary bg-gradient text-white p-2">Installer verified
+                              </p><br>
+                              <p>La commande suivante téléchargera et installera Composer en tant que commande système nommée composer, sous
+                                /usr/local/bin:</p>
+                              <p class="bg-secondary bg-gradient text-white p-2">sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin
+                                --filename=composer
+                              </p><br>
+                              <p>Vous verrez une sortie semblable à celle-ci :
+                              
+                              </p>
+                              <p class="bg-secondary bg-gradient text-white p-2">Output
+                                All settings correct for using Composer
+                                Downloading...
+                              
+                                Composer (version 2.2.9) successfully installed to: /usr/local/bin/composer
+                                Use it: php /usr/local/bin/composer</p><br>
+                              <p>Pour tester votre installation, exécutez :
+                              
+                              </p>
+                              <p class="bg-secondary bg-gradient text-white p-2">composer</p><br>
+                              <p class="my-3 police">-Nous allons maintenant cree un projet via c'est commande </p>
+                              <p class="bg-secondary bg-gradient text-white p-2">sudo composer create-project codeigniter4/appstarter nomduprojet</p><br>
+                              <p> Par default le projet est crée dans /home/utilisateur/nomduprojet mais si nous le créons depuis le home , ca le créera dans le home</p>
+                              
+                              <strong><p class="my-4 police">- maintenant nous allons créer un fichier qui permettra de faire fonctionner le serveur nginx
+                              </p></strong>
+                              <p class="bg-secondary bg-gradient text-white p-2">cd /etc/nginx/sites-available</p><br>
+                              <p class="bg-secondary bg-gradient text-white p-2">vi "monprojet" ici en locurence sudo vi 123des.fr</p>
+                              <p class="police"> faite  <strong class="bg-secondary bg-gradient text-white p-2">i</strong>  puis insérez tous ce texte
+                              </p>
+<textarea class="textareaServer" name="" id="" cols="100" rows="20">
+  server {
+    listen 80;
+    listen [::]:80;
+
+    server_name 123des.fr;
+
+    root  /home/projet421/public;
+    index index.php index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+
+        # With php-fpm:
+        fastcgi_pass unix:/run/php/php8.1-fpm.sock;
+        # With php-cgi:
+        # fastcgi_pass 127.0.0.1:9000;
+    }
+
+    error_page 404 /index.php;
+
+    # deny access to hidden files such as .htaccess
+    location ~ /\. {
+        deny all;
+    }
+}
+</textarea>
+                              <p class="my-3 police">- une fois copié faite echap suivi de 
+                                <strong class="bg-secondary bg-gradient text-white p-2">:wq</strong> </p>
+                              <p class="bg-secondary bg-gradient text-white p-2">ln -s /etc/nginx/sites-available/123des.fr /etc/nginx/sites-enabled/</p><br>
+                              <p class="bg-secondary bg-gradient text-white p-2">/etc/init.d/nginx reload</p><br>
+                              <p class="my-3 police">-Nous allons maintenant eteindre apache2 qui peut rentrer en conflit avec nginx </p>
+                              <p class="bg-secondary bg-gradient text-white p-2">sudo service apache2 stop</p><br>
+                              <p class="my-3 police">-Nous allons maintenant donner des droits a notre projet dans l'element parents contant votre projet  pour qu'il fonctionne avec codeigniter </p>
+                              <p class="bg-secondary bg-gradient text-white p-2">cd</p><br>
+                              <p class="bg-secondary bg-gradient text-white p-2">cd /home/</p><br>
+                              <p class="bg-secondary bg-gradient text-white p-2">sudo chmod -R 777 projet421</p><br>
+                              <p>faite cette commande et votre fichier devrais maintenant etre surligner en vert </p>
+                              <p class="bg-secondary bg-gradient text-white p-2">ls -la</p><br>
+                              <div class=" d-flex justify-content-center my-5"><img class="img-fluid img-tuto" src="img/tutocodeigniter/codeigniter1.png" alt=""></div>
+                              
+                              <p>Nous allons maintenant rentrer notre url dans le fichier env qui a etais compiler </p>
+                              <div class=" d-flex justify-content-center my-5"><img class="img-fluid img-tuto" src="img/tutocodeigniter/codeigniter2.png" alt=""></div>
+                              <p>allez maintenant sur votre navigateur web et tapper votre url suivis de /index.php</p>
+                              <p>vous devriez tomber sur cette affichage</p>
+                              <div class=" d-flex justify-content-center my-5"><img class="img-fluid img-tuto" src="img/tutocodeigniter/codeigniter3.png" alt=""></div>
+
+                                                          </div>
                           </div>
                 
                 
