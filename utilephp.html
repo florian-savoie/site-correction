@@ -101,7 +101,7 @@
               <li class="nav-item ">
                 <a class="nav-link " data-bs-toggle="pill" href="#rappel">rappel php</a>
               </li>
-       <!-- Tab panes         <li class="nav-item">
+              <!-- Tab panes         <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="pill" href="#commandeutilelinux"></a>
               </li>
               <li class="nav-item">
@@ -252,7 +252,6 @@
                   </table>
                 </div>
               </div>
-              <div class="tab-pane container fade" id="menu2">...</div>
             </div>
 
 
@@ -265,6 +264,7 @@
 
 
         <div class="tab-pane container-fluid" id="methodesphp">
+
           <div class="row">
 
             <ul class="nav nav-pills container-fluid col-sm-12 col-lg-2 flex-column p-3">
@@ -321,6 +321,27 @@
               <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="pill" href="#SuperglobaleGET">Superglobale GET</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#Superglobalepost">Superglobale POST
+
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#fichiertext">ecrire , lire dans un fichier texte
+
+                </a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " data-bs-toggle="pill" href="#lescoockies">Les Cookies
+
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#session">Les sessions
+
+
+                </a>
+
             </ul>
 
             <!-- Tab panes -->
@@ -1365,70 +1386,71 @@
                       </table>
                     </div>
                   </div>
-             
-              <div class="row mt-3">
-                <div class="col-md-12 col-lg-6">
-                  <h2 class="text-center">La boucle  for                                                                                                      
-                  </h2>
-                  <p class="text-center"> pour </p>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="50" rows="10 ">for($j = 0; $j <= 15; $j++)
+
+                  <div class="row mt-3">
+                    <div class="col-md-12 col-lg-6">
+                      <h2 class="text-center">La boucle for
+                      </h2>
+                      <p class="text-center"> pour </p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="50" rows="10 ">for($j = 0; $j <= 15; $j++)
                           {
                               echo $j;
                           }</textarea></td>
-                        <td>l'objectif de cette boucle est aussi d'effectuer une répétition de code</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                            <td>l'objectif de cette boucle est aussi d'effectuer une répétition de code</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
 
 
 
-                <div class="col-md-12 col-lg-6">
-                  <h2 class="text-center">Parcourir un tableau array avec la boucle foreach </h2>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="50" rows="10"><?php
+                    <div class="col-md-12 col-lg-6">
+                      <h2 class="text-center">Parcourir un tableau array avec la boucle foreach </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="50" rows="10"><?php
                           foreach($tableau as $cle => $valeur)
                           {
                               echo "$cle - $valeur <br>";
                           }</textarea></td>
-                        <td>Dans la boucle (et dans le echo) les variables $cle et $valeur auraient pu être nommées $x et $y, leur nom n'a pas d'importance</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-md-12 col-lg-12">
-                  <h2 class="text-center">Boucle imbriquée (Double boucle)
-                                                                                                    
-                  </h2>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="150" rows="20 ">echo '<table border="1">';
+                            <td>Dans la boucle (et dans le echo) les variables $cle et $valeur auraient pu être nommées
+                              $x et $y, leur nom n'a pas d'importance</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Boucle imbriquée (Double boucle)
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="150" rows="20 ">echo '<table border="1">';
                           for($ligne = 0; $ligne < 10; $ligne++) //ligne est à zéro
                           {
                               echo '<tr>';
@@ -1439,38 +1461,41 @@
                               echo '</tr>';
                           } 
                           echo '</table>';</textarea></td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
                 </div>
-
               </div>
-            </div>
-          </div>
-        
 
 
 
-     
 
 
-      <div class="tab-pane container fade" id="InclusionDeFichiers">
-        <div class="container mt-3">
-          <div class="row">
-            <div class="col-md-12 col-lg-6">
-              <h2 class="text-center">include</h2>
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Commande</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1"><?php include('inc/haut.inc.php'); ?></textarea></td>
-                            <td>include attend comme argument un nom de fichier valide pour pouvoir l'inclure !La seule différence réside dans le cas d'une erreur (nom de fichier incorrect) Include fera une erreur et poursuivra l'exécution du code.
+
+
+              <div class="tab-pane container fade" id="InclusionDeFichiers">
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                      <h2 class="text-center">include</h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="50"
+                                rows="1"><?php include('inc/haut.inc.php'); ?></textarea></td>
+                            <td>include attend comme argument un nom de fichier valide pour pouvoir l'inclure !La seule
+                              différence réside dans le cas d'une erreur (nom de fichier incorrect) Include fera une
+                              erreur et poursuivra l'exécution du code.
 
                             </td>
                           </tr>
@@ -1495,8 +1520,11 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td><textarea name="" id="" cols="50" rows="1"> <?php  include('inc/haut.inc.php') ?>;</textarea></td>
-                            <td>Tout comme include, require permet d'inclure un fichier dans un autre. La seule différence réside dans le cas d'une erreur (nom de fichier incorrect) Require fera une erreur et stopera l'exécution du code.
+                            <td><textarea name="" id="" cols="50"
+                                rows="1"> <?php  include('inc/haut.inc.php') ?>;</textarea></td>
+                            <td>Tout comme include, require permet d'inclure un fichier dans un autre. La seule
+                              différence réside dans le cas d'une erreur (nom de fichier incorrect) Require fera une
+                              erreur et stopera l'exécution du code.
                             </td>
                           </tr>
 
@@ -1517,43 +1545,47 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td><textarea name="" id="" cols="50" rows="1"><?php include_once('inc/haut.inc.php'); ?></textarea></td>
-                                    <td>once est juste présent pour s'assurer que le fichier soit inclut une seule fois dans le code.
-        
-                                    </td>
-                                  </tr>
-        
-        
-                                </tbody>
-                              </table>
-                            </div>
-        
-        
-        
-                            <div class="col-md-12 col-lg-6">
-                              <h2 class="text-center">Require_once
+                            <td><textarea name="" id="" cols="50"
+                                rows="1"><?php include_once('inc/haut.inc.php'); ?></textarea></td>
+                            <td>once est juste présent pour s'assurer que le fichier soit inclut une seule fois dans le
+                              code.
 
-                              </h2>
-        
-                              <table class="table table-striped">
-                                <thead>
-                                  <tr>
-                                    <th>Commande</th>
-                                    <th>Description</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td><textarea name="" id="" cols="50" rows="1"> <?php Require_once('inc/haut.inc.php'); ?></textarea></td>
-                                    <td>once est juste présent pour s'assurer que le fichier soit inclut une seule fois dans le code.
-                                    </td>
-                                  </tr>
-        
-        
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-6">
+                      <h2 class="text-center">Require_once
+
+                      </h2>
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="50"
+                                rows="1"> <?php Require_once('inc/haut.inc.php'); ?></textarea></td>
+                            <td>once est juste présent pour s'assurer que le fichier soit inclut une seule fois dans le
+                              code.
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1564,7 +1596,7 @@
                     <div class="col-md-12 col-lg-12">
                       <h2 class="text-center">Notre premier array : une liste de prenom
                       </h2>
-                
+
                       <table class="table table-striped">
                         <thead>
                           <tr>
@@ -1577,7 +1609,7 @@
                             <td><textarea name="" id="" cols="80" rows="10"><?php
                               $listePrenom = array("gregoire","nathalie","emilie","françois","georges");
                               echo '<pre>'; print_r($listePrenom); echo '</pre>';</textarea></td>
-                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                            <td><textarea name="" id="" cols="80" rows="10">Résultat
                                 Avec print_r :
                                 Array
                                 (
@@ -1596,7 +1628,9 @@
 
 
                     <div class="col-md-12 col-lg-12">
-                      <h2 class="text-center">Nous pouvons également affecter des valeurs dans un tableau array au coup par coup (pratique lorsque nous n'avons pas toutes les valeurs sous la main immédiatement), exemple :
+                      <h2 class="text-center">Nous pouvons également affecter des valeurs dans un tableau array au coup
+                        par coup (pratique lorsque nous n'avons pas toutes les valeurs sous la main immédiatement),
+                        exemple :
                       </h2>
 
                       <table class="table table-striped">
@@ -1614,7 +1648,7 @@
                               $listePays[] = 'Espagne';
                               $listePays[] = 'Angleterre';
                               echo "<pre>"; print_r($listePays); echo "</pre>";</textarea></td>
-                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                            <td><textarea name="" id="" cols="80" rows="10">Résultat
                                 Avec print_r
                                 Array
                                 (
@@ -1635,8 +1669,10 @@
                       <h2 class="text-center">Et si nous voulions afficher tous les pays d'un seul coup ?
 
                       </h2>
-                      <p>implode permet d'extraire les valeurs d'un tableau array, cette fonction attends 2 arguments, 1 array à explorer et 1 séparateur (ce qui permettra de séparer les valeurs une fois extraites).</p>
-                
+                      <p>implode permet d'extraire les valeurs d'un tableau array, cette fonction attends 2 arguments, 1
+                        array à explorer et 1 séparateur (ce qui permettra de séparer les valeurs une fois extraites).
+                      </p>
+
                       <table class="table table-striped">
                         <thead>
                           <tr>
@@ -1654,7 +1690,7 @@
                               echo "<pre>"; print_r($listePays); echo "</pre>";
                               echo $listePays[1] . '<br>';
                               echo implode($listePays, '<br>');</pre>';</textarea></td>
-                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                            <td><textarea name="" id="" cols="80" rows="10">Résultat
                                 France
                                 
                                 Italie
@@ -1690,7 +1726,7 @@
                               {
                                   echo $listePays[$i] . '<br>';
                               }</textarea></td>
-                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                            <td><textarea name="" id="" cols="80" rows="10">Résultat
                                 France
                                 
                                 Italie
@@ -1710,9 +1746,11 @@
                       <h2 class="text-center">Parcourir un tableau array avec la boucle foreach
 
                       </h2>
-                <p>le mot clé "as" et symbole "=>" sont quant à eux prédéfinis dans le langage, il faut les respecter, c'est une régle de syntaxe lorsqu'on utilise la boucle foreach.
+                      <p>le mot clé "as" et symbole "=>" sont quant à eux prédéfinis dans le langage, il faut les
+                        respecter, c'est une régle de syntaxe lorsqu'on utilise la boucle foreach.
 
-                  La boucle foreach est prévue pour s'arreter toute seule lorsqu'il n'y a plus d'éléments à parcourir dans le tableau array.</p>
+                        La boucle foreach est prévue pour s'arreter toute seule lorsqu'il n'y a plus d'éléments à
+                        parcourir dans le tableau array.</p>
                       <table class="table table-striped">
                         <thead>
                           <tr>
@@ -1727,7 +1765,7 @@
                               {
                                   echo "$cle - $valeur <br>";
                               }</textarea></td>
-                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                            <td><textarea name="" id="" cols="80" rows="10">Résultat
                                 0 - France
                                 
                                 1 - Italie
@@ -1760,8 +1798,9 @@
                             <td><textarea name="" id="" cols="80" rows="10">
                      $couleur = array("j" => "jaune", "b" => "bleu", "v" => "vert"); 
                                  echo '<pre>'; print_r($couleur); echo '</pre>';
-                                 echo $couleur['j'] . '<br>' . $couleur['b'] . '<br>' . $couleur['v'] . '<br>';</textarea></td>
-                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                                 echo $couleur['j'] . '<br>' . $couleur['b'] . '<br>' . $couleur['v'] . '<br>';</textarea>
+                            </td>
+                            <td><textarea name="" id="" cols="80" rows="10">Résultat
                                 jaune
                                 
                                 bleu
@@ -1780,7 +1819,8 @@
 
 
                       </h2>
-                <p>Plus simplement, un tableau multidimensionnel désigne un ou plusieurs tableaux à l’intérieur d’un tableau principal .</p>
+                      <p>Plus simplement, un tableau multidimensionnel désigne un ou plusieurs tableaux à l’intérieur
+                        d’un tableau principal .</p>
                       <table class="table table-striped">
                         <thead>
                           <tr>
@@ -1793,7 +1833,7 @@
                             <td><textarea name="" id="" cols="80" rows="10"><?php
                               $tabMultidimensionnel = array(0 => array("prenom" => "Julien", "nom" => "Cottet"), 1 => array("prenom" => "Nicolas", "nom" => "Lafaye"));
                               echo '<pre>'; print_r($tabMultidimensionnel); echo '</pre>';</textarea></td>
-                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                            <td><textarea name="" id="" cols="80" rows="10">Résultat
                                 Array
                                 (
                                     [0] => Array
@@ -1818,7 +1858,8 @@
 
 
                     <div class="col-md-12 col-lg-12">
-                      <h2 class="text-center">Si nous voulions sortir le prénom "Julien" en passant par notre tableau, nous devrions faire suivre plusieurs crochets :
+                      <h2 class="text-center">Si nous voulions sortir le prénom "Julien" en passant par notre tableau,
+                        nous devrions faire suivre plusieurs crochets :
 
                       </h2>
 
@@ -1836,7 +1877,7 @@
     $tabMultidimensionnel = array(0 => array("prenom" => "Julien", "nom" => "Cottet"), 
        1 => array("prenom" => "Nicolas", "nom" => "Lafaye"));
                    echo $tabMultidimensionnel[0]['prenom'];</textarea></td>
-                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                            <td><textarea name="" id="" cols="80" rows="10">Résultat
                                 Julien</textarea></td>
                           </tr>
 
@@ -1850,23 +1891,23 @@
               </div>
 
 
-            
 
 
 
-          
-          <div class="tab-pane container fade" id="LesSuperglobales">
-            <div class="container mt-3">
-              <div class="row">
-                <div class="col-md-12 col-lg-12">
-                  <h2 class="text-center">A quoi servent les superglobales en PHP ?
 
-                  </h2>
-                  <table class="table table-striped">
 
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="120" rows="40">
+              <div class="tab-pane container fade" id="LesSuperglobales">
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">A quoi servent les superglobales en PHP ?
+
+                      </h2>
+                      <table class="table table-striped">
+
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" rows="40" style="width: 100%;">
 
 
                           Superglobale	Description	Exemple d'utilisation
@@ -1907,106 +1948,111 @@
                           Contient les variables fournies par l'environnement.	-</textarea></td>
 
 
-                        <td></td>
+                            <td></td>
 
-                      </tr>
+                          </tr>
 
-                    </tbody>
-                  </table>
-                </div>
+                        </tbody>
+                      </table>
+                    </div>
 
-                <div class="col-md-12 col-lg-12">
-                  <h2 class="text-center">$_SERVER est une variable très pratique puisqu'elle nous permet d'obtenir des informations sur le serveur :
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">$_SERVER est une variable très pratique puisqu'elle nous permet d'obtenir
+                        des informations sur le serveur :
 
 
-                  </h2>
-                  <table class="table table-striped">
+                      </h2>
+                      <table class="table table-striped">
 
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="80" rows="20"><?php    
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="20"><?php    
                           echo '<pre>'; print_r($_SERVER); echo '</pre>';</textarea></td>
 
 
-                        <td><img src="img/phplessupersglobales.png"class="img-fluid" alt=""></td>
-                      </tr>
+                            <td><img src="img/phplessupersglobales.png" class="img-fluid" alt=""></td>
+                          </tr>
 
-                    </tbody>
-                  </table>
-                </div>   
-                             <div class="col-md-12 col-lg-12">
-                  <h2=4 class="text-center">La clé DOCUMENT_ROOT de la superglobale $_SERVER permet d'avoir accès au chemin dans lequel nous travaillons actuellement. Ce qui peut être très pratique dans le cadre d'un développement.
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="col-md-12 col-lg-12">
+                      <h2=4 class="text-center">La clé DOCUMENT_ROOT de la superglobale $_SERVER permet d'avoir accès au
+                        chemin dans lequel nous travaillons actuellement. Ce qui peut être très pratique dans le cadre
+                        d'un développement.
 
-                  </h4>
-                  <table class="table table-striped">
+                        </h4>
+                        <table class="table table-striped">
 
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="80" rows="20"><?php    
+                          <tbody>
+                            <tr>
+                              <td><textarea name="" id="" cols="80" rows="20"><?php    
                           echo $_SERVER['DOCUMENT_ROOT'];</textarea></td>
 
 
-                        <td></td>
+                              <td></td>
 
-                      </tr>
+                            </tr>
 
-                    </tbody>
-                  </table>
+                          </tbody>
+                        </table>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
 
-          <div class="tab-pane container fade" id="SuperglobaleGET">
-            <div class="container mt-3">
-              <div class="row">
-                <div class="col-md-12 col-lg-12">
-                  <h2 class="text-center">Superglobale GET - Passage d'argument d'une page à l'autre URL
+              <div class="tab-pane container fade" id="SuperglobaleGET">
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Superglobale GET - Passage d'argument d'une page à l'autre URL
 
-                  </h2>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="90" rows="15"><?php
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="90" rows="15"><?php
                           if(!empty($_GET['idProduit']))
                           {
                               echo $_GET['idProduit'];
                           }</textarea></td>
 
 
-                        <td>$_GET permet de récupérer une ou plusieurs information(s) contenue dans l'url afin de s'en servir dans la page web.
+                            <td>$_GET permet de récupérer une ou plusieurs information(s) contenue dans l'url afin de
+                              s'en servir dans la page web.
 
-                          Nous utilisons les crochets car toutes les superglobales sont des tableaux ARRAY.</td>
+                              Nous utilisons les crochets car toutes les superglobales sont des tableaux ARRAY.</td>
 
-                      </tr>
+                          </tr>
 
-                    </tbody>
-                  </table>
-                </div>
+                        </tbody>
+                      </table>
+                    </div>
 
 
 
-                <div class="col-md-12 col-lg-12">
-                  <h2 class="text-center">Classes & Objets
-                  </h2>
-                  <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="90" rows="15"><?php    
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Classes & Objets
+                      </h2>
+                      <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées
+                        propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="90" rows="15"><?php    
                           class Voiture
                           {
                               public $couleur = "rouge";
@@ -2022,227 +2068,564 @@
                           echo 'manière dont la voiture démarre : ' . $voiture->demarrer() . '<br>';</textarea></td>
 
 
-                        <td><textarea name="" id="" cols="90" rows="15">Résultat
+                            <td><textarea name="" id="" cols="90" rows="15">Résultat
                           couleur de la voiture : rouge
                           
                           annee de la voiture : 2010
                           
                           manière dont la voiture démarre : Je démarre comme ça...</textarea></td>
 
-                      </tr>
+                          </tr>
 
-                    </tbody>
-                  </table>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="tab-pane container fade" id="">
-            <div class="container mt-3">
-              <div class="row">
-                <div class="col-md-12 col-lg-12">
-                  <h2 class="text-center">Classes & Objets
-                  </h2>
-                  <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="90" rows="15"><?php    
-                          class Voiture
+              <div class="tab-pane container fade" id="Superglobalepost">
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Superglobale POST - Récupération des saisies d'un formulaire
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" rows="30" style="width: 100%;"><?php
+                          $message = '';
+                          if(!empty($_POST))
                           {
-                              public $couleur = "rouge";
-                              public $annee = 2010;
-                              public function demarrer()
-                              {
-                                  return "Je démarre comme ça...";
-                              }
+                              $message .= 'Recuperation des données saisies : <br>';
+                              $message .= 'ville : ' . $_POST['ville'] . '<br>';
+                              $message .= 'cp : ' . $_POST['cp'] . '<br>';
+                              $message .= 'adresse : ' . $_POST['adresse'] . '<br>';
                           }
-                          $voiture = new Voiture;
-                          echo 'couleur de la voiture : ' . $voiture->couleur . '<br>';
-                          echo 'annee de la voiture : ' . $voiture->annee . '<br>';
-                          echo 'manière dont la voiture démarre : ' . $voiture->demarrer() . '<br>';</textarea></td>
+                          ?>
+                          <!Doctype html>
+                          <html>
+                              <head>
+                                  <title>Ma Page</title>
+                                  <link rel="stylesheet" href="structure.css">
+                                  <meta charset="utf-8">
+                                  <meta name="keywords" content="motclé1 motclé2">
+                                  <meta name="description" content="la description du site web">
+                                  <meta name="author" content="Nom Prenom">
+                              </head>
+                              <body>
+                                  <div><?php echo $message; ?></div>
+                                  <form method="post" action="">
+                                      <label for="ville">ville</label><br>
+                                      <input type="text" name="ville" id="ville" placeholder="saisir 1 ville"><br><br>
+                                      <label for="cp">cp</label><br>
+                                      <input type="text" name="cp" id="cp" placeholder="saisir 1 code postal"><br><br>
+                                      <label for="adresse">adresse</label><br>
+                                      <label name="adresse" id="adresse" placeholder="saisir 1 adresse"></label><br><br>
+</textarea></td>
 
 
-                        <td><textarea name="" id="" cols="90" rows="15">Résultat
-                          couleur de la voiture : rouge
-                          
-                          annee de la voiture : 2010
-                          
-                          manière dont la voiture démarre : Je démarre comme ça...</textarea></td>
+                            <td style="width: 50%;">Quelques Explications :
 
-                      </tr>
+                              Nous disons à l'interpréteur PHP : si le POST n'est pas (caractère "!") vide (c'est donc
+                              qu'il est rempli et que l'internaute a posté), à ce moment-là on peut afficher les saisies
+                              sur la page web.
 
-                    </tbody>
-                  </table>
-                </div>
+                              Dans le cas où l'internaute arrive pour la 1ère fois sur la page web, l'interpréteur
+                              ignorera les lignes PHP de récupération puisqu'il ne rentrera pas dans la condition.
 
+                              Pour être clair :
 
+                              - La toute premiere fois quand on clique sur l'url et qu'on fait "entrer", nous ne
+                              rentrons pas dans le IF.
+                              - Toutes les fois suivantes si nous cliquons sur le bouton "envoi", le code se ré-exécute
+                              et nous rentrons dans le IF.</td>
 
-                <div class="col-md-12 col-lg-12">
-                  <h2 class="text-center">Classes & Objets
-                  </h2>
-                  <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="90" rows="15"><?php    
-                          class Voiture
-                          {
-                              public $couleur = "rouge";
-                              public $annee = 2010;
-                              public function demarrer()
-                              {
-                                  return "Je démarre comme ça...";
-                              }
-                          }
-                          $voiture = new Voiture;
-                          echo 'couleur de la voiture : ' . $voiture->couleur . '<br>';
-                          echo 'annee de la voiture : ' . $voiture->annee . '<br>';
-                          echo 'manière dont la voiture démarre : ' . $voiture->demarrer() . '<br>';</textarea></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
 
 
-                        <td><textarea name="" id="" cols="90" rows="15">Résultat
-                          couleur de la voiture : rouge
-                          
-                          annee de la voiture : 2010
-                          
-                          manière dont la voiture démarre : Je démarre comme ça...</textarea></td>
 
-                      </tr>
 
-                    </tbody>
-                  </table>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="tab-pane container fade" id="ClassesObjets">
-            <div class="container mt-3">
-              <div class="row">
-                <div class="col-md-12 col-lg-12">
-                  <h2 class="text-center">Classes & Objets
-                  </h2>
-                  <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="90" rows="15"><?php    
-                          class Voiture
+              <div class="tab-pane container fade" id="fichiertext">
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Sauvegarder les informations d'un formulaire dans un fichier texte
+                      </h2>
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" style="width:100%" rows="15"><?php
+                          if(!empty($_POST))
                           {
-                              public $couleur = "rouge";
-                              public $annee = 2010;
-                              public function demarrer()
-                              {
-                                  return "Je démarre comme ça...";
-                              }
+                              echo 'Recuperation des données saisies : <br>';
+                              echo 'pseudo : ' . $_POST['pseudo'] . '<br>';
+                              echo 'email : ' . $_POST['email'] . '<br>';
+                                   
+                              $f = fopen("sauvegarde.txt","a");
+                              fwrite($f, $_POST['pseudo'] . " - "); 
+                              fwrite($f, $_POST['email'] . "\n");
+                              $f = fclose($f);        
                           }
-                          $voiture = new Voiture;
-                          echo 'couleur de la voiture : ' . $voiture->couleur . '<br>';
-                          echo 'annee de la voiture : ' . $voiture->annee . '<br>';
-                          echo 'manière dont la voiture démarre : ' . $voiture->demarrer() . '<br>';</textarea></td>
+                          ?></textarea></td>
 
 
-                        <td><textarea name="" id="" cols="90" rows="15">Résultat
-                          couleur de la voiture : rouge
-                          
-                          annee de la voiture : 2010
-                          
-                          manière dont la voiture démarre : Je démarre comme ça...</textarea></td>
+                            <td style="width: 50%;">La fonction prédéfinie fopen() permet d'ouvrir un fichier, ils
+                              attend 2 arguments, son nom et le mode d'ouverture.
+                              Le mode "a" (que nous utilisons dans cet exemple) permet d'ouvrir le fichier, ou de le
+                              créer s'il n'est pas trouvé.
+                              Le fichier est donc ouvert, ou bien créé + ouvert, la variable $f représente le fichier
+                              ouvert.
+                              fwrite() permet d'écrire dans le fichier représenté par $f.
+                              \n entre guillemets permet de passer à la ligne dans un fichier (équivalent de <br> dans
+                              une page web).
+                              fclose(), n'est pas indispensable pour faire fonctionner l'exemple, cette fonction
+                              prédéfinie permet de fermer le fichier et ainsi libérer la ressource.
 
-                      </tr>
+                              Après avoir posté un pseudo et un email, vous pouvez retourner dans votre dossier et vous
+                              devriez voir apparaitre un nouveau fichier nommé : sauvegarde.txt</td>
 
-                    </tbody>
-                  </table>
-                </div>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
 
 
 
-                <div class="col-md-12 col-lg-12">
-                  <h2 class="text-center">Classes & Objets
-                  </h2>
-                  <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="90" rows="15"><?php    
-                          class Voiture
+                    <div class="col-md-12 col-lg-12 mt-3">
+                      <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées
+                        propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" style="width: 100%;" rows="30">
+
+                          $nomFichier = "liste.txt"; 
+                          $fichier = file($nomFichier);  // la fonction file() fait tout le travail, elle retourne chaque ligne d'un fichier à des indices différents d'un tableau array.
+                           
+                          print "<pre>"; print_r($fichier); print "</pre>"; // Affichage du tableau Array dans sa structure.
+                           
+                          foreach($fichier as $ligne) // Parcours du tableau Array pour un affichage plus conventionnel.
                           {
-                              public $couleur = "rouge";
-                              public $annee = 2010;
-                              public function demarrer()
-                              {
-                                  return "Je démarre comme ça...";
-                              }
+                              echo $ligne."<br>";
                           }
-                          $voiture = new Voiture;
-                          echo 'couleur de la voiture : ' . $voiture->couleur . '<br>';
-                          echo 'annee de la voiture : ' . $voiture->annee . '<br>';
-                          echo 'manière dont la voiture démarre : ' . $voiture->demarrer() . '<br>';</textarea></td>
+                           
+                          echo '';
+                           
+                          echo implode($fichier, "<br>"); // Affichage du tableau Array avec un passage à la ligne.</textarea>
+                            </td>
 
 
-                        <td><textarea name="" id="" cols="90" rows="15">Résultat
-                          couleur de la voiture : rouge
+                            <td style="width: 50%;"><textarea name="" id="" style="width: 100%;" rows="30">Explications
+
+                          $nomFichier représente le nom du fichier à explorer (il faut que le fichier existe et soit dans le même dossier de préférence).
                           
-                          annee de la voiture : 2010
+                          file est une fonction PHP prédéfinie permettant d'ouvrir un fichier et de retourner son contenu sous forme de tableau ARRAY (chaque ligne représentera une nouvelle clé du tableau array). Nous lui transmettons la variable $nomFichier afin que le bon fichier soit ouvert.
                           
-                          manière dont la voiture démarre : Je démarre comme ça...</textarea></td>
+                          print_r permet d'afficher le contenu et d'observer la structure du tableau Array
+                          
+                          foreach permet de boucler et d'afficher toutes les informations du tableau Array
+                          
+                          implode permet également d'afficher toutes les informations du tableau Array
+                          
+                          Résultat
+                          Avec print_r :
+                          Array
+                          (
+                              [0] => le pseudo posté
+                              [1] => l'email posté
+                          )
+                          
+                          Avec foreach :
+                          le pseudo posté - l'email posté
+                          
+                          
+                          Avec implode :
+                          le pseudo posté - l'email posté</textarea></td>
 
-                      </tr>
+                          </tr>
 
-                    </tbody>
-                  </table>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
+              <div class="tab-pane container fade" id="lescoockies">
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Les Cookies
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="70" rows="15">
+                          <?php
+                          setCookie("nomCookie","contenuCookie",time()+31536000);</textarea></td>
+
+
+                            <td>Explications
+
+                              setCookie est donc une fonction prédéfinie permettant de créer un fichier (un fichier
+                              cookie) sur l'ordinateur de l'internaute pour sauvegarder des informations.
+
+                              Les arguments attendus sont :
+
+                              fléche 1. Le nom du cookie, dans notre cas nous l'avons nommé "nomCookie".
+
+                              fléche 2. Le contenu du cookie (les informations), ici nous avons inscrit "contenuCookie".
+
+                              fléche 3. La date d'expiration du cookie (péremption), dans l'exemple ci-dessus nous avons
+                              pris le moment actuel (par l'intermédiaire de la foncion time(), timestamp) et avons
+                              ajouté le nombre de secondes écoulées en 1 année, soit : 31536000 (secondes)
+
+                              A noter, un internaute peut supprimer 1 cookie a tout moment (puisque le fichier se trouve
+                              sur son ordinateur)!
+
+                              Qu'est-ce que la fonction time() en PHP :
+
+                              La fonction PHP prédéfinie time() permet de donner le timestamp, cela représente le nombre
+                              de secondes écoulées entre le 01 janvier 1970 (date clé en informatique) et maintenant (le
+                              moment présent).
+                              Plus d'informations ici : Wikipédia TimeStamp</td>
+
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Création / Mise à jour du cookie :
+
+                      </h2>
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="70" rows="15">$expiration = 365*24*3600;
+                          setCookie("pays",$pays,time()+$expiration);</textarea></td>
+
+
+                            <td>$expiration nous permet de conserver le calcul d'1 année en secondes (365 jours x 24
+                              heures x 3600 vient de 60sec x 60min nombre de seconde dans 1 heure).
+                              setCookie nous permet de déposer le fichier cookie sur l'ordinateur de l'internaute.
+                              Argument 1 - Nom du cookie : pays
+                              Argument 2 - Valeur du cookie : "fr" ou "en" ou "it" ou "es"
+                              Argument 3 - Date d'expiration : dans 1 an à partir d'aujourd'hui
+                              Puisque ce code ne se trouve pas dans une condition, nous créerons (dans tous les cas) un
+                              cookie (sur l'ordinateur de l'internaute) avec le code pays contenu dans la variable
+                              $pays.
+                              Un cookie sera valable 1 an après la dernière visite de l'internaute (l'internaute qui se
+                              connecte tous les mois verra son choix gardé à l'infini sans probleme d'affichage de texte
+                              pour la langue, puisqu'à chacun de ses passages son cookie est relancé pour 1 année à
+                              partir de sa dernière visite).</td>
+
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane container fade" id="session">
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Exemple d'un formulaire avec session
+
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" rows="25" style="width: 100%;"><?php
+                          session_start();
+                          if($_POST)
+                          {
+                              $_SESSION["pseudo"] = $_POST['pseudo'];
+                          }
+                          //--------------------------------------
+                          if(isset($_SESSION['pseudo']))
+                          {
+                              echo "votre pseudo est: " . $_SESSION['pseudo'] . "<br>";
+                          } 
+                          else
+                          {
+                              echo '  <form method="post" action="">
+                                          <label for="pseudo">Pseudo:</label><br>
+                                          <input type="text" name="pseudo" value=""><br>
+                                          <input type="submit" value="envoi">
+                                      </form>';
+                          }
+</textarea></td>
+
+
+                            <td style="width: 50%;">Quelques Explications :
+
+                              session_start(); nous permet de créer 1 fichier de session la première fois (et de
+                              l'ouvrir les fois suivantes).
+
+                              if($_POST)permet de déclarer une condition "si l'internaute à posté en cliquant sur le
+                              bouton submit", nous rentrons dans les accolades du IF et exécutons le code présent
+                              - Enregistrement du pseudo posté par l'internaute via le formulaire, dans le fichier de
+                              session .
+
+                              if(isset($_SESSION['pseudo']))permet de déclarer une condition "si un pseudo est défini
+                              dans le fichier de session de l'internaute", nous rentrons dans les accolades du IF et
+                              exécutons le code présent
+                              - Affichage du pseudo de l'internaute conservé dans le fichier de session.
+
+                              else(ce else se réfère au IF précédent) permet de déclarer un cas par défaut "si aucun
+                              pseudo n'est défini dans le fichier de session de l'internaute", nous rentrons dans les
+                              accolades du ELSE et exécutons le code présent
+                              - Affichage d 'un formulaire.</td>
+
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Exemple avec l'inactivité d'une session
+
+
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" rows="25" style="width: 100%;"><?php
+                          session_start();
+                          echo 'Temps Actuel : ' . time() . '<br>';
+                          print "<pre>"; print_r($_SESSION); print "</pre>";
+                           
+                          if(isset($_SESSION['temps']))
+                          {
+                              if(time()>($_SESSION['limite'] + $_SESSION['temps']))
+                              {
+                                  session_destroy();
+                                  echo "déconnexion"; 
+                              }
+                              else
+                              {
+                                  $_SESSION['temps'] = time();
+                                  echo "connexion mise à jour";
+                              }
+                          }
+                          else
+                          {
+                              echo "connexion";
+                              $_SESSION['limite'] = 20;
+                              $_SESSION['temps'] = time();
+                          }
+</textarea></td>
+
+
+                            <td style="width: 50%;">
+                              Quelques Explications et déroulement du script :
+
+                              Pour les tests, il serait judicieux de diviser l'écran en deux avec d'un côté de votre
+                              page web et de l'autre votre dossier /tmp/.
+
+                              session_start()nous permet de créer 1 fichier de session la première fois (et de l'ouvrir
+                              les fois suivantes). permet de voir le timestamp actuel si une session du nom de "temps"
+                              existe nous rentrons dans le IF (ce qui n'est pas le cas, la toute première fois), nous
+                              rentrons donc dans le ELSE Nous rentrons dans le ELSE car aucune session du nom de "temps"
+                              existe. Nous rentrons le chiffre 20 dans une partie de la session que nous nommons
+                              "limite". Cela nous permettra plus tard de limiter la session à 20 secondes.
+
+                              echo 'Temps Actuel : ' . time() . '
+                              ';
+
+                              if(isset($_SESSION['temps']))
+
+                              else
+
+                              $_SESSION['limite'] = 20;
+
+                              $_SESSION['temps'] = time();Nous rentrons le timestamp actuel (nombre de secondes
+                              délivrées entre le 01/01/1970 et maintenant) dans une partie de la session que nous
+                              nommons "temps". Cela nous permettra plus tard d'interroger la dernière trace d'activité
+                              sur le site web.
+
+                              ...Relancer l'exécution de la page avec l'aide de F5 ou Ctrl+R .
+
+                              ...Le code se ré-exécute.
+
+                              if(isset($_SESSION['temps']))si une session du nom de "temps" existe nous rentrons dans le
+                              IF (ce qui est le cas, la seconde première fois, nous ne rentrerons donc pas dans le ELSE
+
+                              if(time()>($_SESSION['limite'] + $_SESSION['temps']))si le timestamp actuel est supérieur
+                              au dernier timestamp enregistré dans la session + la partie limitée enregistrée dans la
+                              session (pour rappel, 20 secondes), c'est donc que nous avons dépassé notre temps de
+                              connexion inactive autorisée, nous rentrerons dans les accolades du IF
+
+                              session_destroy();permet de supprimer le fichier de session.
+
+                              ... Dans l'autre cas, si vous affichez la page web une première fois et que vous la
+                              raffraichissez rapidement (moins de 20 secondes après), nous rentrons dans le 1er IF puis
+                              dans le ELSE (présent à l'intérieur du premier IF)
+
+                              $_SESSION['temps'] = time();cela nous permet de mettre la connexion à jour en affectant le
+                              timestamp actuel dans la session (cela le modifiera pour l'actualiser).</td>
+
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Supprimer un fichier de session
+
+
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" rows="15" style="width: 100%;"><?php
+                          session_start();
+                          $_SESSION['pseudo'] = "Mathieu";
+                          $_SESSION['mdp'] = "Balmont";
+                          print_r($_SESSION);
+                          unset($_SESSION['mdp']);
+                          print_r($_SESSION);
+                          session_destroy();
+                          print_r($_SESSION);
+</textarea></td>
+
+
+                            <td style="width: 50%;"> Quelques Explications :
+
+                              unset($_SESSION['mdp']); permet de vider la partie "mdp" (mot de passe).
+
+
+                              session_destroy(); permet de supprimer physiquement le fichier de session dans le dossier
+                              /tmp/ et donc toutes les informations conservées dans le fichier.
+
+                              Petite particularité : il faut savoir que le session_destroy()est vu par l'interpréteur,
+                              gardé, puis exécuté qu'à la fin du script.
+
+                              C'est la raison pour laquelle le dernier print_rvous donnera toujours accès aux
+                              informations de la session car l'exécution du script n'est pas terminée.
+
+                              Cependant, si vous retournez dans votre dossier /tmp/, présent à l'intérieur de wamp, vous
+                              verrez que le fichier n'existe plus !</td>
+
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
         </div>
+
+
+
+
+
+
+
 
       </div>
     </div>
-  </div>
-  </div>
 
 
   </div>
-  </div>
-  </div>
+  
 
-  </div>
-  </div>
-
-  </div>
-  </div>
-
-
-
-  </div>
-
- </div>
 
 
 
