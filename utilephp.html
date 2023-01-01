@@ -101,12 +101,12 @@
               <li class="nav-item ">
                 <a class="nav-link " data-bs-toggle="pill" href="#rappel">rappel php</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="pill" href="#commandeutilelinux">commande utile linux</a>
+       <!-- Tab panes         <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#commandeutilelinux"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="pill" href="#menu2">Menu 2</a>
-              </li>
+                <a class="nav-link" data-bs-toggle="pill" href="#menu2"></a>
+              </li>-->
             </ul>
 
             <!-- Tab panes -->
@@ -292,6 +292,34 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="pill" href="#FonctionUtilisateur">Fonction Utilisateur</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " data-bs-toggle="pill" href="#LesBoucles">Les Boucles
+
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#InclusionDeFichiers">Inclusion De Fichiers
+
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#TableauxArray">Tableaux Array
+
+                </a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " data-bs-toggle="pill" href="#ClassesObjets">Classes & Objets
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#LesSuperglobales">Les Superglobales
+
+
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#SuperglobaleGET">Superglobale GET</a>
               </li>
             </ul>
 
@@ -503,7 +531,8 @@
                   <div class="row">
                     <div class="col-md-12">
                       <h2 class="text-center">Concaténation lors d'un affichage</h2>
-                      <p>La concaténation en PHP permet de faire suivre des informations sur la même ligne d'instruction (avec un echo par exemple).</p>
+                      <p>La concaténation en PHP permet de faire suivre des informations sur la même ligne d'instruction
+                        (avec un echo par exemple).</p>
                       <table class="table table-striped">
                         <thead>
                           <tr>
@@ -521,37 +550,37 @@
                             <td>même chose que la ligne d'au dessus, sans concaténation.</td>
                           </tr>
                           <tr>
-                            <td><textarea name="" id="" cols="50"
-                                rows="1">"Hey ! " . $x . " " . $y;</textarea></td>
+                            <td><textarea name="" id="" cols="50" rows="1">"Hey ! " . $x . " " . $y;</textarea></td>
                             <td>concaténation de texte et de variables.</td>
                           </tr>
                           <tr>
-                            <td><textarea name="" id="" cols="50"
-                                rows="1">echo "<br>", "Hello ", $y, "<br>";</textarea></td>
-                            <td> concaténation avec l'utilisation d'une virgule (la virgule et le point de concaténation sont similaires). </td>
+                            <td><textarea name="" id="" cols="50" rows="1">echo "<br>", "Hello ", $y, "<br>";</textarea>
+                            </td>
+                            <td> concaténation avec l'utilisation d'une virgule (la virgule et le point de concaténation
+                              sont similaires). </td>
                           </tr>
                           <tr>
-                            <td><textarea name="" id="" cols="50"
-                                rows="1">$prenom2 .= " Marie";</textarea></td>
-                            <td>  Affectation de la valeur " Marie" sur la variable : $prenom2. Ajout SANS remplacement de la valeur précédente grâce à l'opérateur .= </td>
+                            <td><textarea name="" id="" cols="50" rows="1">$prenom2 .= " Marie";</textarea></td>
+                            <td> Affectation de la valeur " Marie" sur la variable : $prenom2. Ajout SANS remplacement
+                              de la valeur précédente grâce à l'opérateur .= </td>
                           </tr>
                         </tbody>
                       </table>
-<h5 class="text-center">Syntaxe : Différence entre l'utilisation des guillemets et des quotes
-</h5>
-<table class="table table-striped">
-  <tbody>
+                      <h5 class="text-center">Syntaxe : Différence entre l'utilisation des guillemets et des quotes
+                      </h5>
+                      <table class="table table-striped">
+                        <tbody>
                           <tr>
                             <td><textarea name="" id="" cols="50" rows="1">$jour = 'aujourd\'hui';</textarea></td>
-                            <td> utilisation des quotes avec l'anti-slash pour éviter une erreur sur lapostrophe du mot : aujourd'hui.</td>
+                            <td> utilisation des quotes avec l'anti-slash pour éviter une erreur sur lapostrophe du mot
+                              : aujourd'hui.</td>
                           </tr>
                           <tr>
                             <td><textarea name="" id="" cols="50" rows="1">$jour = "aujourd'hui";</textarea></td>
                             <td>même chose que la ligne d'au dessus, sans concaténation.</td>
                           </tr>
                           <tr>
-                            <td><textarea name="" id="" cols="50"
-                                rows="1">$texte = 'bonjour';</textarea></td>
+                            <td><textarea name="" id="" cols="50" rows="1">$texte = 'bonjour';</textarea></td>
                             <td>utilisation des quotes</td>
                           </tr>
                           <tr>
@@ -560,14 +589,12 @@
                             <td> Concaténation d'une variable et de texte</td>
                           </tr>
                           <tr>
-                            <td><textarea name="" id="" cols="50"
-                                rows="1">"$texte tout le monde<br>";</textarea></td>
-                            <td>  Affichage dans des guillemets, la variable est évaluée. Pas de concaténation </td>
+                            <td><textarea name="" id="" cols="50" rows="1">"$texte tout le monde<br>";</textarea></td>
+                            <td> Affichage dans des guillemets, la variable est évaluée. Pas de concaténation </td>
                           </tr>
                           <tr>
-                            <td><textarea name="" id="" cols="50"
-                                rows="1">'$texte tout le monde<br>';</textarea></td>
-                            <td>  Affichage dans des quotes, la variable n'est pas évaluée !   </td>
+                            <td><textarea name="" id="" cols="50" rows="1">'$texte tout le monde<br>';</textarea></td>
+                            <td> Affichage dans des quotes, la variable n'est pas évaluée ! </td>
                           </tr>
                         </tbody>
                       </table>
@@ -645,11 +672,12 @@
               <div class="tab-pane container fade" id="Conditions">
                 <div class="container mt-3">
                   <div class="d-flex justify-content-center">
-                  <textarea name="" id="" cols="30" rows="3">
+                    <textarea name="" id="" cols="30" rows="3">
                     $a = 10; 
                     $b = 5; 
                     $c = 2;
-                     </textarea></div>
+                     </textarea>
+                  </div>
                   <div class="row">
                     <div class="col-md-12 col-lg-12">
                       <h2 class="text-center">Les Conditions
@@ -812,7 +840,8 @@
                           </tr>
                         </tbody>
                       </table>
-                    </div>                    <div class="col-md-12 col-lg-12">
+                    </div>
+                    <div class="col-md-12 col-lg-12">
                       <h2 class="text-center">Condition Switch
 
 
@@ -854,7 +883,8 @@
                           </tr>
                         </tbody>
                       </table>
-                    </div>                    <div class="col-md-12 col-lg-12">
+                    </div>
+                    <div class="col-md-12 col-lg-12">
                       <h2 class="text-center">Les Opérateurs
 
 
@@ -873,22 +903,22 @@
                             </td>
                           </tr>
                           <tr>
-                            <td>==	</td>
+                            <td>== </td>
                             <td>comparaison de la valeur
                             </td>
                           </tr>
                           <tr>
-                            <td>===	</td>
+                            <td>=== </td>
                             <td>comparaison de la valeur et du type
                             </td>
                           </tr>
                           <tr>
-                            <td>!=	</td>
+                            <td>!= </td>
                             <td>différent de
                             </td>
                           </tr>
                           <tr>
-                            <td>!	</td>
+                            <td>! </td>
                             <td>n'est pas
                             </td>
                           </tr>
@@ -898,17 +928,19 @@
                             </td>
                           </tr>
                           <tr>
-                            <td><</td>
+                            <td>
+                              << /td>
                             <td>inférieur à ...
                             </td>
                           </tr>
                           <tr>
-                            <td>>=	</td>
+                            <td>>= </td>
                             <td>supérieur ou égal à ...
                             </td>
                           </tr>
                           <tr>
-                            <td><=	</td>
+                            <td>
+                              <= </td>
                             <td>inférieur ou égal à ...
                             </td>
                           </tr>
@@ -1050,7 +1082,8 @@
                               {
                                   echo 'la variable $pseudo n\'existe PAS!<br>';
                               }</textarea></td>
-                            <td>isset() est une fonction prédéfinie permettant de dire si une variable existe ou non (et différent de null).</td>
+                            <td>isset() est une fonction prédéfinie permettant de dire si une variable existe ou non (et
+                              différent de null).</td>
                           </tr>
 
 
@@ -1084,7 +1117,8 @@
                               {
                                   echo 'la variable $pseudo n\'est pas vide (et est donc remplie).<br>';
                               }</textarea></td>
-                            <td>empty() est une fonction prédéfinie permettant de dire si une variable est vide ou non. (False sera considéré comme empty).</td>
+                            <td>empty() est une fonction prédéfinie permettant de dire si une variable est vide ou non.
+                              (False sera considéré comme empty).</td>
                           </tr>
 
                         </tbody>
@@ -1110,7 +1144,9 @@
                               {
                                   echo 'la variable $pseudo n\'est pas vide (et est donc remplie)!<br>';
                               }</textarea></td>
-                            <td>La simple présence du "!" (point d'exclamation) dans les parenthèses du IF permet de changer le sens de la condition, cette fois nous demandons : est-ce que la variable $pseudo n'est pas vide ? (en gros, est-elle remplie ?).</td>
+                            <td>La simple présence du "!" (point d'exclamation) dans les parenthèses du IF permet de
+                              changer le sens de la condition, cette fois nous demandons : est-ce que la variable
+                              $pseudo n'est pas vide ? (en gros, est-elle remplie ?).</td>
                           </tr>
 
                         </tbody>
@@ -1121,23 +1157,23 @@
               </div>
 
 
-            
-          <div class="tab-pane container fade" id="FonctionUtilisateur">
-            <div class="container mt-3">
-              <div class="row">
-                <div class="col-md-12 col-lg-12">
-                  <h2 class="text-center">Créons notre première fonction pour calculer une TVA
-                  </h2>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="50" rows="10"><?php    
+
+              <div class="tab-pane container fade" id="FonctionUtilisateur">
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Créons notre première fonction pour calculer une TVA
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="50" rows="10"><?php    
                           // déclaration d'une fonction
                           function calculTva()
                           {
@@ -1146,26 +1182,26 @@
                            
                           // exécution de notre fonction
                           echo calculTva() . '<br>';</textarea></td>
-                        <td>Résultat 120</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                            <td>Résultat 120</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
 
 
 
-                <div class="col-md-12 col-lg-6">
-                  <h2 class="text-center">Créons une fonction avec un argument pour faire plus de calculs</h2>
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Commande</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><textarea name="" id="" cols="50" rows="10"><?php    
+                    <div class="col-md-12 col-lg-6">
+                      <h2 class="text-center">Créons une fonction avec un argument pour faire plus de calculs</h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="50" rows="10"><?php    
                           // déclaration d'une fonction
                           function calculTva2($nombre)
                           {
@@ -1175,27 +1211,27 @@
                           // exécution de notre fonction
                           echo calculTva2(500) . '<br>';
                           echo calculTva2(1000) . '<br>';</textarea></td>
-                        <td>
-                          Résultat      600         1200</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-12">
-                <h2 class="text-center">Créons une fonction avec un argument pour faire tous les calculs possibles
+                            <td>
+                              Résultat 600 1200</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-lg-12">
+                    <h2 class="text-center">Créons une fonction avec un argument pour faire tous les calculs possibles
 
-                </h2>
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th>Commande</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><textarea name="" id="" cols="50" rows="10"><?php    
+                    </h2>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Commande</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><textarea name="" id="" cols="50" rows="10"><?php    
                         // déclaration d'une fonction
                         function calculTva3($nombre, $taux)
                         {
@@ -1205,27 +1241,27 @@
                         // exécution de notre fonction
                         echo "500 € avec un taux de 5.5 % font : " . calculTva3(500, 1.055) . '<br>';
                         echo "1000 € avec un taux de 20 % font : "calculTva3(1000, 1.2) . '<br>';</textarea></td>
-                      <td>Résultat          527.5       1200</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                          <td>Résultat 527.5 1200</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
 
 
 
-              <div class="col-md-12 col-lg-6">
-                <h2 class="text-center">Argument facultatif par défaut
-                </h2>
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th>Commande</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><textarea name="" id="" cols="50" rows="10"><?php    
+                  <div class="col-md-12 col-lg-6">
+                    <h2 class="text-center">Argument facultatif par défaut
+                    </h2>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Commande</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><textarea name="" id="" cols="50" rows="10"><?php    
                         // déclaration d'une fonction
                         function calculTva4($nombre, $taux = 1.2)
                         {
@@ -1234,28 +1270,29 @@
                          
                         // exécution de notre fonction
                         echo calculTva4(1500) . '<br>'; // exécution de la fonction avec 1 seul argument
-                        echo calculTva4(800, 1.07) . '<br>'; // exécution de la fonction avec 2 arguments</textarea></td>
-                      <td>
-                        Résultat       1800      856</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="col-md-12 col-lg-12">
-              <h2 class="text-center">Portée des variables : espace global et espace local
+                        echo calculTva4(800, 1.07) . '<br>'; // exécution de la fonction avec 2 arguments</textarea>
+                          </td>
+                          <td>
+                            Résultat 1800 856</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-md-12 col-lg-12">
+                  <h2 class="text-center">Portée des variables : espace global et espace local
 
-              </h2>
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Commande</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="10"><?php
+                  </h2>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Commande</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><textarea name="" id="" cols="50" rows="10"><?php
                       $pays = 'France';
                       function affichagePays()
                       {
@@ -1263,24 +1300,77 @@
                           echo $pays;
                       }
                       affichagePays();</textarea></td>
-                    <td>Ligne 4 : Le mot-clé global permet d'importer une variable de l'espace global vers l'espace local, en l'ocurrence la variable $pays.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                        <td>Ligne 4 : Le mot-clé global permet d'importer une variable de l'espace global vers l'espace
+                          local, en l'ocurrence la variable $pays.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
 
-          </div>
-            </div>
-          </div>
+              </div>
 
 
-          <div class="tab-pane container fade" id="LesVariablesEtConstantesphp">
-            <div class="container mt-3">
-              <div class="row">
+
+              <div class="tab-pane container fade" id="LesBoucles">
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                      <h2 class="text-center">la boucles while
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="50" rows="10 "><?php
+                          $i = 0; // valeur de départ
+                          while ($i<5) // tant que $i est inférieur à 5
+                          {
+                              echo "$i /"; // affichage
+                              $i++; // Ceci est une forme contractée de : $i = $i+1; l'incrémentation du "compteur" est effectuée à chaque tour de boucle.
+                          }</textarea></td>
+                            <td>nous déclarons la variable prenom contenant la valeur "florian"</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-6">
+                      <h2 class="text-center">La boucle DoWhile </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="50" rows="10">$i = 0;
+                          do {
+                              echo $i;
+                          } while ($i > 0);</textarea></td>
+                            <td>Concernant la boucle do-while, il s'agit exactement du même principe que la boucle
+                              while, la seule différence réside dans le fait que la condition d'entrée est testée à la
+                              fin plutôt qu'au début.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+             
+              <div class="row mt-3">
                 <div class="col-md-12 col-lg-6">
-                  <h2 class="text-center">Les Variables : Types - Déclaration - Affectation</h2>
-                  <p>Le contenu d'une variable n'est pas "figé", il peut être modifié à tout moment</p>
+                  <h2 class="text-center">La boucle  for                                                                                                      
+                  </h2>
+                  <p class="text-center"> pour </p>
                   <table class="table table-striped">
                     <thead>
                       <tr>
@@ -1290,15 +1380,12 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><textarea name="" id="" cols="50" rows="1">$prenom = "florian";</textarea></td>
-                        <td>nous déclarons la variable prenom contenant la valeur "florian"</td>
+                        <td><textarea name="" id="" cols="50" rows="10 ">for($j = 0; $j <= 15; $j++)
+                          {
+                              echo $j;
+                          }</textarea></td>
+                        <td>l'objectif de cette boucle est aussi d'effectuer une répétition de code</td>
                       </tr>
-                      <tr>
-                        <td><textarea name="" id="" cols="50" rows="1"> gettype()</textarea></td>
-                        <td>fonction prédéfinie (= prévue par le langage Php) nous permettant de voir le type d'une
-                          variable</td>
-                      </tr>
-
                     </tbody>
                   </table>
                 </div>
@@ -1306,10 +1393,7 @@
 
 
                 <div class="col-md-12 col-lg-6">
-                  <h2 class="text-center">Les constantes
-                  </h2>
-                  <p>A quelques détails près une constante c'est comme une variable, son rôle est de conserver une
-                    valeur</p>
+                  <h2 class="text-center">Parcourir un tableau array avec la boucle foreach </h2>
                   <table class="table table-striped">
                     <thead>
                       <tr>
@@ -1319,17 +1403,551 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><textarea name="" id="" cols="50" rows="1">define("CAPITALE","Paris");</textarea></td>
-                        <td>define est une fonction prédéfinie (prévue par le langage PHP) permettant de définir une
-                          constante en annonçant d'abord son nom, puis ensuite sa valeur.</td>
+                        <td><textarea name="" id="" cols="50" rows="10"><?php
+                          foreach($tableau as $cle => $valeur)
+                          {
+                              echo "$cle - $valeur <br>";
+                          }</textarea></td>
+                        <td>Dans la boucle (et dans le echo) les variables $cle et $valeur auraient pu être nommées $x et $y, leur nom n'a pas d'importance</td>
                       </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12 col-lg-12">
+                  <h2 class="text-center">Boucle imbriquée (Double boucle)
+                                                                                                    
+                  </h2>
+                  <table class="table table-striped">
+                    <thead>
                       <tr>
-                        <td><textarea name="" id="" cols="50" rows="1">echo __FILE__  . "<br>";</textarea></td>
-                        <td>Affiche le chemin complet vers le fichier actuel</td>
+                        <th>Commande</th>
+                        <th>Description</th>
                       </tr>
+                    </thead>
+                    <tbody>
                       <tr>
-                        <td><textarea name="" id="" cols="50" rows="1">echo __LINE__ . "<br>";</textarea></td>
-                        <td> Affiche le numéro de la ligne</td>
+                        <td><textarea name="" id="" cols="150" rows="20 ">echo '<table border="1">';
+                          for($ligne = 0; $ligne < 10; $ligne++) //ligne est à zéro
+                          {
+                              echo '<tr>';
+                              for($cellule = 0; $cellule < 10; $cellule++) // tant que ligne est à  zéro, cellule s'incrémente 10 fois - ligne est à 1, cellule s'incrémente 10 fois - ligne est à 2, cellule s'incrémente 10 fois, etc...
+                              {
+                                  echo '<td>' . (10 * $ligne + $cellule) . '</td>'; // 10 * 0 +0 ,  10* 0 + 1, 10* 0 + 2, etc... --- 10* 1+0, 10* 1 + 1, 10* 1+2, etc. Permet d'avoir les multiples de 10.
+                              }
+                              echo '</tr>';
+                          } 
+                          echo '</table>';</textarea></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        
+
+
+
+     
+
+
+      <div class="tab-pane container fade" id="InclusionDeFichiers">
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col-md-12 col-lg-6">
+              <h2 class="text-center">include</h2>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Commande</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><textarea name="" id="" cols="50" rows="1"><?php include('inc/haut.inc.php'); ?></textarea></td>
+                            <td>include attend comme argument un nom de fichier valide pour pouvoir l'inclure !La seule différence réside dans le cas d'une erreur (nom de fichier incorrect) Include fera une erreur et poursuivra l'exécution du code.
+
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-6">
+                      <h2 class="text-center">Require
+                      </h2>
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="50" rows="1"> <?php  include('inc/haut.inc.php') ?>;</textarea></td>
+                            <td>Tout comme include, require permet d'inclure un fichier dans un autre. La seule différence réside dans le cas d'une erreur (nom de fichier incorrect) Require fera une erreur et stopera l'exécution du code.
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                      <h2 class="text-center">include_once</h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="50" rows="1"><?php include_once('inc/haut.inc.php'); ?></textarea></td>
+                                    <td>once est juste présent pour s'assurer que le fichier soit inclut une seule fois dans le code.
+        
+                                    </td>
+                                  </tr>
+        
+        
+                                </tbody>
+                              </table>
+                            </div>
+        
+        
+        
+                            <div class="col-md-12 col-lg-6">
+                              <h2 class="text-center">Require_once
+
+                              </h2>
+        
+                              <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>Commande</th>
+                                    <th>Description</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><textarea name="" id="" cols="50" rows="1"> <?php Require_once('inc/haut.inc.php'); ?></textarea></td>
+                                    <td>once est juste présent pour s'assurer que le fichier soit inclut une seule fois dans le code.
+                                    </td>
+                                  </tr>
+        
+        
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                </div>
+              </div>
+
+
+              <div class="tab-pane container fade" id="TableauxArray">
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Notre premier array : une liste de prenom
+                      </h2>
+                
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>resultat</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="10"><?php
+                              $listePrenom = array("gregoire","nathalie","emilie","françois","georges");
+                              echo '<pre>'; print_r($listePrenom); echo '</pre>';</textarea></td>
+                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                                Avec print_r :
+                                Array
+                                (
+                                    [0] => gregoire
+                                    [1] => nathalie
+                                    [2] => emilie
+                                    [3] => françois
+                                    [4] => georges
+                                )</textarea></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Nous pouvons également affecter des valeurs dans un tableau array au coup par coup (pratique lorsque nous n'avons pas toutes les valeurs sous la main immédiatement), exemple :
+                      </h2>
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>resultat</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="10"><?php
+                              $listePays[] = 'France';
+                              $listePays[] = 'Italie';
+                              $listePays[] = 'Espagne';
+                              $listePays[] = 'Angleterre';
+                              echo "<pre>"; print_r($listePays); echo "</pre>";</textarea></td>
+                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                                Avec print_r
+                                Array
+                                (
+                                    [0] => France
+                                    [1] => Italie
+                                    [2] => Espagne
+                                    [3] => Angleterre
+                                )</textarea></td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Et si nous voulions afficher tous les pays d'un seul coup ?
+
+                      </h2>
+                      <p>implode permet d'extraire les valeurs d'un tableau array, cette fonction attends 2 arguments, 1 array à explorer et 1 séparateur (ce qui permettra de séparer les valeurs une fois extraites).</p>
+                
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>resultat</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="10"><?php
+                              $listePays[] = 'France';
+                              $listePays[] = 'Italie';
+                              $listePays[] = 'Espagne';
+                              $listePays[] = 'Angleterre';
+                              echo "<pre>"; print_r($listePays); echo "</pre>";
+                              echo $listePays[1] . '<br>';
+                              echo implode($listePays, '<br>');</pre>';</textarea></td>
+                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                                France
+                                
+                                Italie
+                                
+                                Espagne
+                                
+                                Angleterre
+                                
+                                </textarea></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-6">
+                      <h2 class="text-center">Parcourrir un tableau array avec la boucle for
+                      </h2>
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>resultat</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="10"><?php
+                              for($i = 0; $i < sizeof($listePays); $i++)
+                              {
+                                  echo $listePays[$i] . '<br>';
+                              }</textarea></td>
+                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                                France
+                                
+                                Italie
+                                
+                                Espagne
+                                
+                                Angleterre</textarea></td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Parcourir un tableau array avec la boucle foreach
+
+                      </h2>
+                <p>le mot clé "as" et symbole "=>" sont quant à eux prédéfinis dans le langage, il faut les respecter, c'est une régle de syntaxe lorsqu'on utilise la boucle foreach.
+
+                  La boucle foreach est prévue pour s'arreter toute seule lorsqu'il n'y a plus d'éléments à parcourir dans le tableau array.</p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>resultat</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="10"><?php
+                              foreach($listePays as $cle => $valeur)
+                              {
+                                  echo "$cle - $valeur <br>";
+                              }</textarea></td>
+                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                                0 - France
+                                
+                                1 - Italie
+                                
+                                2 - Espagne
+                                
+                                3 - Angleterre</textarea></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Choisir les clés (indices) et créer un tableau array associatif
+
+                      </h2>
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>resultat</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="10">
+                     $couleur = array("j" => "jaune", "b" => "bleu", "v" => "vert"); 
+                                 echo '<pre>'; print_r($couleur); echo '</pre>';
+                                 echo $couleur['j'] . '<br>' . $couleur['b'] . '<br>' . $couleur['v'] . '<br>';</textarea></td>
+                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                                jaune
+                                
+                                bleu
+                                
+                                vert</textarea></td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Tableaux array Multidimensionnels
+
+
+                      </h2>
+                <p>Plus simplement, un tableau multidimensionnel désigne un ou plusieurs tableaux à l’intérieur d’un tableau principal .</p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>resultat</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="10"><?php
+                              $tabMultidimensionnel = array(0 => array("prenom" => "Julien", "nom" => "Cottet"), 1 => array("prenom" => "Nicolas", "nom" => "Lafaye"));
+                              echo '<pre>'; print_r($tabMultidimensionnel); echo '</pre>';</textarea></td>
+                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                                Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [prenom] => Julien
+                                            [nom] => Cottet
+                                        )
+                                
+                                    [1] => Array
+                                        (
+                                            [prenom] => Nicolas
+                                            [nom] => Lafaye
+                                        )
+                                
+                                )</textarea></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Si nous voulions sortir le prénom "Julien" en passant par notre tableau, nous devrions faire suivre plusieurs crochets :
+
+                      </h2>
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>resultat</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="10">
+    <?php
+    $tabMultidimensionnel = array(0 => array("prenom" => "Julien", "nom" => "Cottet"), 
+       1 => array("prenom" => "Nicolas", "nom" => "Lafaye"));
+                   echo $tabMultidimensionnel[0]['prenom'];</textarea></td>
+                              <td><textarea name="" id="" cols="80" rows="10">Résultat
+                                Julien</textarea></td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+            
+
+
+
+          
+          <div class="tab-pane container fade" id="LesSuperglobales">
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-md-12 col-lg-12">
+                  <h2 class="text-center">A quoi servent les superglobales en PHP ?
+
+                  </h2>
+                  <table class="table table-striped">
+
+                    <tbody>
+                      <tr>
+                        <td><textarea name="" id="" cols="120" rows="40">
+
+
+                          Superglobale	Description	Exemple d'utilisation
+
+                          $GLOBALS	
+                          Contient toutes les variables disponibles dans un contexte global	-
+
+                          $_SERVER
+                        	Contient toutes les informations fournies par le serveur web	
+                          Pratique pour connaitre le chemin du site, d'un dossier, etc.
+
+                          $_GET	
+                          Contient les informations fournies en paramètre au script via la méthode GET par l'URL et le protocole HTTP.	
+                          Utile pour véhiculer des informations d'une page à l'autre.
+
+                          $_POST	
+                          Contient les informations fournies par un formulaire via la méthode POST du protocole HTTP.	
+                          Utile pour récupérer les saisies postées dans un formulaire par un internaute.
+
+                          $_FILES	
+                          Contient les informations liées à l'upload d'un (ou plusieurs) fichier(s) par un formulaire 
+                          (fonctionne en complément de la superglobale $_POST).	
+                          Utile pour récupérer le(s) fichier(s) uplaodé(s) dans un formulaire par un internaute.
+                          
+                          $_COOKIE	
+                          Contient les informations fournies par les cookies via le protocole HTTP.	
+                          Utile pour conserver des informations sur un internaute.
+                         
+                          $_SESSION	
+                          Contient les informations de la session en cours.
+                          	Utile pour maintenir une connexion avec un internaute sur un site web
+                         
+                          $_REQUEST	
+                          Contient les variables fournies au script (peu importe la méthode utilisée).	
+                          Utile pour récupérer des informations sans savoir précisément d'où elles proviennent
+                         
+                          $_ENV	
+                          Contient les variables fournies par l'environnement.	-</textarea></td>
+
+
+                        <td></td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="col-md-12 col-lg-12">
+                  <h2 class="text-center">$_SERVER est une variable très pratique puisqu'elle nous permet d'obtenir des informations sur le serveur :
+
+
+                  </h2>
+                  <table class="table table-striped">
+
+                    <tbody>
+                      <tr>
+                        <td><textarea name="" id="" cols="80" rows="20"><?php    
+                          echo '<pre>'; print_r($_SERVER); echo '</pre>';</textarea></td>
+
+
+                        <td><img src="img/phplessupersglobales.png"class="img-fluid" alt=""></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>   
+                             <div class="col-md-12 col-lg-12">
+                  <h2=4 class="text-center">La clé DOCUMENT_ROOT de la superglobale $_SERVER permet d'avoir accès au chemin dans lequel nous travaillons actuellement. Ce qui peut être très pratique dans le cadre d'un développement.
+
+                  </h4>
+                  <table class="table table-striped">
+
+                    <tbody>
+                      <tr>
+                        <td><textarea name="" id="" cols="80" rows="20"><?php    
+                          echo $_SERVER['DOCUMENT_ROOT'];</textarea></td>
+
+
+                        <td></td>
+
                       </tr>
 
                     </tbody>
@@ -1338,300 +1956,293 @@
               </div>
             </div>
           </div>
-        </div>
+
+
+          <div class="tab-pane container fade" id="SuperglobaleGET">
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-md-12 col-lg-12">
+                  <h2 class="text-center">Superglobale GET - Passage d'argument d'une page à l'autre URL
+
+                  </h2>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Commande</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><textarea name="" id="" cols="90" rows="15"><?php
+                          if(!empty($_GET['idProduit']))
+                          {
+                              echo $_GET['idProduit'];
+                          }</textarea></td>
+
+
+                        <td>$_GET permet de récupérer une ou plusieurs information(s) contenue dans l'url afin de s'en servir dans la page web.
+
+                          Nous utilisons les crochets car toutes les superglobales sont des tableaux ARRAY.</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
 
 
 
-      </div>
-
-        </div>
-
-
-
-      </div>
-      <div class="tab-pane container fade" id="LesVariablesEtConstantesphp">
-        <div class="container mt-3">
-          <div class="row">
-            <div class="col-md-12 col-lg-6">
-              <h2 class="text-center">Les Variables : Types - Déclaration - Affectation</h2>
-              <p>Le contenu d'une variable n'est pas "figé", il peut être modifié à tout moment</p>
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Commande</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1">$prenom = "florian";</textarea></td>
-                    <td>nous déclarons la variable prenom contenant la valeur "florian"</td>
-                  </tr>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1"> gettype()</textarea></td>
-                    <td>fonction prédéfinie (= prévue par le langage Php) nous permettant de voir le type d'une
-                      variable</td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
+                <div class="col-md-12 col-lg-12">
+                  <h2 class="text-center">Classes & Objets
+                  </h2>
+                  <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Commande</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><textarea name="" id="" cols="90" rows="15"><?php    
+                          class Voiture
+                          {
+                              public $couleur = "rouge";
+                              public $annee = 2010;
+                              public function demarrer()
+                              {
+                                  return "Je démarre comme ça...";
+                              }
+                          }
+                          $voiture = new Voiture;
+                          echo 'couleur de la voiture : ' . $voiture->couleur . '<br>';
+                          echo 'annee de la voiture : ' . $voiture->annee . '<br>';
+                          echo 'manière dont la voiture démarre : ' . $voiture->demarrer() . '<br>';</textarea></td>
 
 
+                        <td><textarea name="" id="" cols="90" rows="15">Résultat
+                          couleur de la voiture : rouge
+                          
+                          annee de la voiture : 2010
+                          
+                          manière dont la voiture démarre : Je démarre comme ça...</textarea></td>
 
-            <div class="col-md-12 col-lg-6">
-              <h2 class="text-center">Les constantes
-              </h2>
-              <p>A quelques détails près une constante c'est comme une variable, son rôle est de conserver une
-                valeur</p>
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Commande</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1">define("CAPITALE","Paris");</textarea></td>
-                    <td>define est une fonction prédéfinie (prévue par le langage PHP) permettant de définir une
-                      constante en annonçant d'abord son nom, puis ensuite sa valeur.</td>
-                  </tr>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1">echo __FILE__  . "<br>";</textarea></td>
-                    <td>Affiche le chemin complet vers le fichier actuel</td>
-                  </tr>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1">echo __LINE__ . "<br>";</textarea></td>
-                    <td> Affiche le numéro de la ligne</td>
-                  </tr>
+                      </tr>
 
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="tab-pane container fade" id="LesVariablesEtConstantesphp">
-        <div class="container mt-3">
-          <div class="row">
-            <div class="col-md-12 col-lg-6">
-              <h2 class="text-center">Les Variables : Types - Déclaration - Affectation</h2>
-              <p>Le contenu d'une variable n'est pas "figé", il peut être modifié à tout moment</p>
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Commande</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1">$prenom = "florian";</textarea></td>
-                    <td>nous déclarons la variable prenom contenant la valeur "florian"</td>
-                  </tr>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1"> gettype()</textarea></td>
-                    <td>fonction prédéfinie (= prévue par le langage Php) nous permettant de voir le type d'une
-                      variable</td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
-
-
-
-            <div class="col-md-12 col-lg-6">
-              <h2 class="text-center">Les constantes
-              </h2>
-              <p>A quelques détails près une constante c'est comme une variable, son rôle est de conserver une
-                valeur</p>
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Commande</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1">define("CAPITALE","Paris");</textarea></td>
-                    <td>define est une fonction prédéfinie (prévue par le langage PHP) permettant de définir une
-                      constante en annonçant d'abord son nom, puis ensuite sa valeur.</td>
-                  </tr>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1">echo __FILE__  . "<br>";</textarea></td>
-                    <td>Affiche le chemin complet vers le fichier actuel</td>
-                  </tr>
-                  <tr>
-                    <td><textarea name="" id="" cols="50" rows="1">echo __LINE__ . "<br>";</textarea></td>
-                    <td> Affiche le numéro de la ligne</td>
-                  </tr>
-
-                </tbody>
-              </table>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="tab-pane container fade" id="">
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-md-12 col-lg-12">
+                  <h2 class="text-center">Classes & Objets
+                  </h2>
+                  <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Commande</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><textarea name="" id="" cols="90" rows="15"><?php    
+                          class Voiture
+                          {
+                              public $couleur = "rouge";
+                              public $annee = 2010;
+                              public function demarrer()
+                              {
+                                  return "Je démarre comme ça...";
+                              }
+                          }
+                          $voiture = new Voiture;
+                          echo 'couleur de la voiture : ' . $voiture->couleur . '<br>';
+                          echo 'annee de la voiture : ' . $voiture->annee . '<br>';
+                          echo 'manière dont la voiture démarre : ' . $voiture->demarrer() . '<br>';</textarea></td>
+
+
+                        <td><textarea name="" id="" cols="90" rows="15">Résultat
+                          couleur de la voiture : rouge
+                          
+                          annee de la voiture : 2010
+                          
+                          manière dont la voiture démarre : Je démarre comme ça...</textarea></td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+                <div class="col-md-12 col-lg-12">
+                  <h2 class="text-center">Classes & Objets
+                  </h2>
+                  <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Commande</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><textarea name="" id="" cols="90" rows="15"><?php    
+                          class Voiture
+                          {
+                              public $couleur = "rouge";
+                              public $annee = 2010;
+                              public function demarrer()
+                              {
+                                  return "Je démarre comme ça...";
+                              }
+                          }
+                          $voiture = new Voiture;
+                          echo 'couleur de la voiture : ' . $voiture->couleur . '<br>';
+                          echo 'annee de la voiture : ' . $voiture->annee . '<br>';
+                          echo 'manière dont la voiture démarre : ' . $voiture->demarrer() . '<br>';</textarea></td>
+
+
+                        <td><textarea name="" id="" cols="90" rows="15">Résultat
+                          couleur de la voiture : rouge
+                          
+                          annee de la voiture : 2010
+                          
+                          manière dont la voiture démarre : Je démarre comme ça...</textarea></td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane container fade" id="ClassesObjets">
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-md-12 col-lg-12">
+                  <h2 class="text-center">Classes & Objets
+                  </h2>
+                  <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Commande</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><textarea name="" id="" cols="90" rows="15"><?php    
+                          class Voiture
+                          {
+                              public $couleur = "rouge";
+                              public $annee = 2010;
+                              public function demarrer()
+                              {
+                                  return "Je démarre comme ça...";
+                              }
+                          }
+                          $voiture = new Voiture;
+                          echo 'couleur de la voiture : ' . $voiture->couleur . '<br>';
+                          echo 'annee de la voiture : ' . $voiture->annee . '<br>';
+                          echo 'manière dont la voiture démarre : ' . $voiture->demarrer() . '<br>';</textarea></td>
+
+
+                        <td><textarea name="" id="" cols="90" rows="15">Résultat
+                          couleur de la voiture : rouge
+                          
+                          annee de la voiture : 2010
+                          
+                          manière dont la voiture démarre : Je démarre comme ça...</textarea></td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+                <div class="col-md-12 col-lg-12">
+                  <h2 class="text-center">Classes & Objets
+                  </h2>
+                  <p>Les classes et objets sont avant tout un type de données regroupant des variables (appelées propriétés ou attributs) et des fonctions utilisateurs (appelées méthode).</p>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Commande</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><textarea name="" id="" cols="90" rows="15"><?php    
+                          class Voiture
+                          {
+                              public $couleur = "rouge";
+                              public $annee = 2010;
+                              public function demarrer()
+                              {
+                                  return "Je démarre comme ça...";
+                              }
+                          }
+                          $voiture = new Voiture;
+                          echo 'couleur de la voiture : ' . $voiture->couleur . '<br>';
+                          echo 'annee de la voiture : ' . $voiture->annee . '<br>';
+                          echo 'manière dont la voiture démarre : ' . $voiture->demarrer() . '<br>';</textarea></td>
+
+
+                        <td><textarea name="" id="" cols="90" rows="15">Résultat
+                          couleur de la voiture : rouge
+                          
+                          annee de la voiture : 2010
+                          
+                          manière dont la voiture démarre : Je démarre comme ça...</textarea></td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
       </div>
-
-
-    </div>
-
-
-
-  </div>
-  <div class="tab-pane container fade" id="LesVariablesEtConstantesphp">
-    <div class="container mt-3">
-      <div class="row">
-        <div class="col-md-12 col-lg-6">
-          <h2 class="text-center">Les Variables : Types - Déclaration - Affectation</h2>
-          <p>Le contenu d'une variable n'est pas "figé", il peut être modifié à tout moment</p>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Commande</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><textarea name="" id="" cols="50" rows="1">$prenom = "florian";</textarea></td>
-                <td>nous déclarons la variable prenom contenant la valeur "florian"</td>
-              </tr>
-              <tr>
-                <td><textarea name="" id="" cols="50" rows="1"> gettype()</textarea></td>
-                <td>fonction prédéfinie (= prévue par le langage Php) nous permettant de voir le type d'une
-                  variable</td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-
-
-
-        <div class="col-md-12 col-lg-6">
-          <h2 class="text-center">Les constantes
-          </h2>
-          <p>A quelques détails près une constante c'est comme une variable, son rôle est de conserver une
-            valeur</p>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Commande</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><textarea name="" id="" cols="50" rows="1">define("CAPITALE","Paris");</textarea></td>
-                <td>define est une fonction prédéfinie (prévue par le langage PHP) permettant de définir une
-                  constante en annonçant d'abord son nom, puis ensuite sa valeur.</td>
-              </tr>
-              <tr>
-                <td><textarea name="" id="" cols="50" rows="1">echo __FILE__  . "<br>";</textarea></td>
-                <td>Affiche le chemin complet vers le fichier actuel</td>
-              </tr>
-              <tr>
-                <td><textarea name="" id="" cols="50" rows="1">echo __LINE__ . "<br>";</textarea></td>
-                <td> Affiche le numéro de la ligne</td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-      </div>
     </div>
   </div>
-
-
-  <div class="tab-pane container fade" id="LesVariablesEtConstantesphp">
-    <div class="container mt-3">
-      <div class="row">
-        <div class="col-md-12 col-lg-6">
-          <h2 class="text-center">Les Variables : Types - Déclaration - Affectation</h2>
-          <p>Le contenu d'une variable n'est pas "figé", il peut être modifié à tout moment</p>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Commande</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><textarea name="" id="" cols="50" rows="1">$prenom = "florian";</textarea></td>
-                <td>nous déclarons la variable prenom contenant la valeur "florian"</td>
-              </tr>
-              <tr>
-                <td><textarea name="" id="" cols="50" rows="1"> gettype()</textarea></td>
-                <td>fonction prédéfinie (= prévue par le langage Php) nous permettant de voir le type d'une
-                  variable</td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-
-
-
-        <div class="col-md-12 col-lg-6">
-          <h2 class="text-center">Les constantes
-          </h2>
-          <p>A quelques détails près une constante c'est comme une variable, son rôle est de conserver une
-            valeur</p>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Commande</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><textarea name="" id="" cols="50" rows="1">define("CAPITALE","Paris");</textarea></td>
-                <td>define est une fonction prédéfinie (prévue par le langage PHP) permettant de définir une
-                  constante en annonçant d'abord son nom, puis ensuite sa valeur.</td>
-              </tr>
-              <tr>
-                <td><textarea name="" id="" cols="50" rows="1">echo __FILE__  . "<br>";</textarea></td>
-                <td>Affiche le chemin complet vers le fichier actuel</td>
-              </tr>
-              <tr>
-                <td><textarea name="" id="" cols="50" rows="1">echo __LINE__ . "<br>";</textarea></td>
-                <td> Affiche le numéro de la ligne</td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
   </div>
 
 
-</div>
-
-
-
-</div>
-
-
-        </div>
-      </div>
-    </div>
+  </div>
+  </div>
+  </div>
 
   </div>
   </div>
 
   </div>
+  </div>
 
 
 
+  </div>
+
+ </div>
 
 
 
