@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="index.css">
+	<title>florian savoie</title>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg">
+		<div class="container-fluid">
+			
+			<a class="navbar-brand ms-4" href="#"><h2>utile php</h2></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse me-3" id="navbarNav">
+				<ul class="navbar-nav ms-md-auto gap-2">
+                    <li class="nav-item rounded">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i
+                                class="bi bi-house-fill me-2"></i>HTML</a>
+                    </li>
+                    <li class="nav-item rounded">
+                        <a class="nav-link" href="css.html"><i class="bi bi-people-fill me-2"></i>CSS</a>
+                    </li>
+
+                    <li class="nav-item dropdown rounded">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="bi bi-person-fill me-2"></i>JAVASCRIPT</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="utilejs.html">utile javascript</a></li>
+                            <li><a class="dropdown-item" href="javascriptcorrection.html">correction exercices</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown rounded">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false"><i
+                              class="bi bi-person-fill me-2"></i>PHP</a>
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="utilephp.html">utile PHP</a></li>
+                          <li><a class="dropdown-item" href="correctionphp.html">correction exercices</a></li>
+
+                      </ul>
+                  </li>
+                    <li class="nav-item rounded">
+                        <a class="nav-link" href="linux.html"><i class="bi bi-telephone-fill me-2"></i>LINUX / GIT</a>
+                    </li>
+                    <li class="nav-item rounded">
+                      <a class="nav-link" href="jeux.html"><i class="bi bi-telephone-fill me-2"></i>jeux</a>
+                  </li>
+                </ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+
+	<div class="container-fluid blockPrincipal my-5">
+		<div class="row p-3">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link " data-bs-toggle="tab" href="#SELECTion">Les requêtes de SELECTion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#typeinput">type input</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu2"> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " data-bs-toggle="tab" href="#menu3"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu4"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu5"></a>
+              </li>
+            </ul>
+          
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div id="SELECTion" class="container-fluid tab-pane fade"><br>
+
+                
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <p class="text-center">table employes</p>
+                      <div class="d-flex justify-content-center"> <img src="img/mysql/basedonnee.png" class="img-fluid" style="width:25rem;" alt=""></div>
+                      <h2 class="text-center">Les requêtes de SELECTion</h2>
+                      <p>.</p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT service FROM employes ;</textarea></td>
+                            <td>selectionne les services de la table employes</td>
+                          </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1"> SELECT nom, prenom FROM employes ; </textarea></td>
+                            <td>selectionne les noms et prenom de la table employes</td>
+                          </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT id_employes, prenom, nom, sexe, service, date_embauche, salaire FROM employes;</textarea></td>
+                            <td>Nous selectionnons toutes les colonnes que nous souhaitons voir apparaitre dans le résultat.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT * FROM employes;</textarea></td>
+                            <td>Afficher la table employes (toutes les colonnes / champs) avec le raccourci étoile " * "
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Le mot clé DISTINCT
+
+                      </h2>
+                      <p>Afficher les services occupés dans l’entreprise (en évitant les doublons cette fois-ci)</p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT DISTINCT(service) FROM employes ;  </textarea>
+                            </td>
+                            <td>Le mot clé DISTINCT permet d'éviter les doublons.
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Les conditions : Le mot clé WHERE
+                    </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT nom, prenom FROM employes WHERE service='informatique';
+                            </textarea></td>
+                            <td>Afficher les employes (nom et prénom) du service informatique (uniquement)
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Le mot clé BETWEEN
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT nom, prenom, date_embauche FROM employes WHERE date_embauche BETWEEN '2006-01-01' AND '2010-12-31';  </textarea>
+                            </td>
+                            <td>Afficher les employes ayant été recrutés entre 2006 et 2010
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Operateurs de comparaisons
+
+                    </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT nom, prenom, service FROM employes WHERE service != 'informatique';
+                            </textarea></td>
+                            <td>Afficher tous les employés sauf ceux du service informatique different
+
+                            </td>
+                        </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT nom, prenom, service, salaire FROM employes WHERE salaire > 3000;
+                            </textarea></td>
+                            <td>Nous isolons une portion de résultats : seulement les employés gagnant + de 3 000 €.
+                            </td></tr>
+                            <td><textarea name="" id="" cols="80" rows="10">
+                                = "est égal"
+                                > "strictement supérieur"
+                                < "strictement inférieur"
+                                >= "supérieur ou égal"
+                                <= "inférieur ou égal"
+                                <> ou != "est différent"
+                            </textarea></td>
+                            <td>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">CURDATE() permet de sortir la date du jour (évolutive dans le temps)
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT nom, prenom, date_embauche FROM employes WHERE date_embauche BETWEEN '2006-01-01' AND CURDATE();</textarea>
+                            </td>
+                            <td>Afficher les employes ayant été recrutés entre 2006 et aujourd'hui  / la fonction crudate permet de dire jusqua aujourdhui 
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Le mot clé LIKE
+
+                    </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT prenom FROM employes WHERE prenom LIKE 's%'
+                            </textarea></td>
+                            <td>Afficher les employés ayant un prénom commençant par la lettre "S"
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT prenom FROM employes WHERE prenom LIKE '%s'
+                            </textarea></td>
+                            <td>Afficher les employés ayant un prénom qui se termine par la lettre "S"
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT prenom FROM employes WHERE prenom LIKE '%-%'
+                            </textarea></td>
+                            <td>Dans notre cas, nous isolerons les prénoms composés (ayant un trait d'union).
+
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Les classements avec ORDER BY
+                      </h2>
+                      <p>ordre alphabétique</p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="3">
+                                SELECT prenom, nom FROM employes ORDER BY prenom ;
+                                SELECT prenom, nom FROM employes ORDER BY prenom ASC ; </textarea>
+                            </td>
+<td><textarea name="" id="" cols="100" rows="3">
+    Avec ou sans le ASC la requête est la même. ASC est le mode de classement appliqué par défaut.
+    ASC veut dire ASCendant croissant (du plus petit au plus grand).</textarea></td>
+                          </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="3">
+                                SELECT prenom, nom FROM employes ORDER BY prenom DESC ; </textarea>
+                            </td>
+<td>Nous pouvons également demander le classement inverse avec le mot clé DESC :
+</td>
+                          </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="3">
+                                SELECT nom, prenom, service, salaire FROM employes ORDER BY salaire ASC, prenom ASC;     </textarea>
+                            </td>
+<td>Nous pouvons également réaliser plusieurs classements sur des champs/colonnes différents :
+
+</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Limiter les résultats avec le mot clé LIMIT
+
+                    </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT nom, prenom, service, salaire FROM employes ORDER BY salaire DESC LIMIT 0,3;
+                            </textarea></td>
+                            <td>Le premier chiffre reste la position de laquelle on part, le second chiffre annonce toujours le nombre d'enregistrements à afficher (dans notre cas, on souhaite les afficher les 3 premier).
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Réaliser des calculs dans nos requêtes
+
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT nom, prenom, salaire*12 FROM employes;</textarea>
+                            </td>
+                            <td>Afficher la liste des employés avec leur salaire annuel (nous ferons un x12 pour simplifier le calcul dans le cadre de ce cours).
+
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Définir un ALIAS avec AS
+
+
+                    </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT nom, prenom, salaire*12 AS salaire_annuel FROM employes;
+                            </textarea></td>
+                            <td>Le mot clé AS permet de définir un ALIAS
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Calculer la somme d'une colonne avec SUM
+
+
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT SUM(salaire*12) FROM employes;</textarea>
+                            </td>
+                            <td>Nous pourrions calculer la somme que l'on paye pour nos salariés en faisant la somme de la colonne salaire :
+
+
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Calculer une moyenne avec AVG
+
+
+
+                    </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT AVG(salaire) FROM employes;
+                            </textarea></td>
+                            <td>AVG est une fonction prédéfinie prenant comme argument (entre parenthèse) le nom de la colonne sur laquelle nous souhaitons calculer une moyenne.
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Arrondir avec ROUND
+
+
+
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT ROUND(AVG(salaire)) FROM employes;</textarea>
+                            </td>
+                            <td><p> ROUND est une fonction prédéfinie prenant comme argument (entre parenthèse) le nombre à arrondir :</p>
+
+                               <p> Nous aurions également pu inscrire : ROUND(AVG(salaire),2) pour obtenir 2 chiffres après la virgule (mais c'est déjà ce que nous avions de base).</p>
+
+
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Compter avec COUNT
+
+
+                    </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT COUNT(*) FROM employes WHERE sexe='f';
+
+                            </textarea></td>
+                            <td>Dans ce contexte, cela nous permet de compter le nombre de femmes dans l'entreprise
+
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Isoler une valeur minimum/maximum avec MIN/MAX
+
+
+
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT MIN(salaire) FROM employes;</textarea>
+                            </td>
+                            <td>Voyons comment trouver le salaire le plus faible dans notre liste d'employés :
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT prenom, salaire FROM employes WHERE salaire = (SELECT MIN(salaire) FROM employes);</textarea>
+                            </td>
+                            <td>SELECT prenom, salaire FROM employes WHERE salaire = (SELECT MIN(salaire) FROM employes);
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Condition IN avec plusieurs valeurs
+
+
+
+                    </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT prenom,service FROM employes WHERE service IN('comptabilite', 'informatique');
+                            </textarea></td>
+                            <td>Cette requête nous permet d'afficher les informaticiens et comptables dans l'entreprise.
+
+
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT prenom, service FROM employes WHERE service NOT IN('comptabilite', 'informatique');
+                            </textarea></td>
+                            <td>Nous pouvons également exclure plusieurs valeurs avec NOT IN :
+
+
+
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Conditions multiples (différents champs et valeurs)
+
+
+
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT prenom, nom, salaire, service FROM employes WHERE service='commercial' AND salaire <= 2000 ;</textarea>
+                            </td>
+                            <td>Dans cette requête nous demanderons à ce que les employés fassent partie du service commercial et gagnent un salaire supérieur ou égal a 2000 €.
+
+
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Ordre de priorité sur les conditions AND et OR
+
+
+
+                    </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="2">SELECT prenom, nom, service, salaire FROM employes WHERE service='production' AND salaire= 1900 OR salaire=2300 ;
+                            </textarea></td>
+                            <td>Dans cette requête nous partons dans l'idée de demander l'affichage des employés du service production gagnant un salaire de 1900 € ou 2300 € précisément.
+
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12">
+                      <h2 class="text-center">Les regroupements avec GROUP BY
+
+
+
+
+
+                      </h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Commande</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT service, COUNT(*) AS nombre FROM employes GROUP BY service;</textarea>
+                            </td>
+                            <td>Le mot clé COUNT permet de compter chaque ligne d'enregistrement (+1), tandis que GROUP BY permet de les grouper ensemble (tout les +1) en fonction du même service.
+
+
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><textarea name="" id="" cols="80" rows="1">SELECT service, COUNT(*) AS nombre FROM employes GROUP BY service HAVING COUNT(*) > 2;</textarea>
+                            </td>
+                            <td>Pour imposer une condition dans une requête comportant un GROUP BY, nous utiliserons le mot clé HAVING :
+                                <p>affichera tout les nombres demployer dans le service , superieur a 2</p>
+
+
+
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+
+
+              </div>
+              <div id="typeinput" class="container tab-pane fade"><br>
+                <img src="img/inputtype.jpg" class="img-fluid imgPenseBeteHtml" alt="">
+                <img src="img/inputtype2.jpg" class="img-fluid imgPenseBeteHtml" alt="">
+              </div>
+              <div id="menu2" class="container tab-pane fade"><br>
+
+              </div>
+              <div id="menu3" class="container tab-pane fade"><br>
+
+              </div>
+              <div id="menu4" class="container tab-pane fade"><br>
+
+              </div>
+              <div id="menu5" class="container tab-pane fade"><br>
+
+              </div>
+            </div>
+          </div>
+          
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<footer id="footer" class="top-space">
+
+
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row pt-3">
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a class="lien_nav" href="index.html">HTML</a> |
+                                <a class="lien_nav" href="css.html">CSS</a> |
+                                <a class="lien_nav" href="javascriptcorrection.html">JAVASCRIPT</a> |
+                                <a class="lien_nav" href="php.html">PHP</a> |
+                                <a class="lien_nav" href="linux.html">LINUX</a>
+                                <a class="lien_nav" href="jeux.html">LINUX</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right ">
+								Copyright &copy; 2022,  Designed by <a class="lien_nav2"
+								href="https://florian-savoie.github.io/mon-cv/" rel="designer">Florian Savoie</a>
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="index.js"></script>
+
+</body>
+
+</html>

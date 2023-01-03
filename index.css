@@ -41,8 +41,8 @@ footer{
      background-color: rgb(223, 25, 52);
 }
 .blockPrincipal{
-    min-height: 60rem;
-    width: 95%;
+    min-height: 80rem;
+    width: 98%;
     background-color: aliceblue;
     border-radius: 2rem;
     box-shadow: rgba(206, 63, 63, 0.56) 0px 22px 100px 15px;}
