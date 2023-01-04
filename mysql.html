@@ -91,6 +91,22 @@
               <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="tab" href="#jointure">les jointures</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#fonctions">Les fonctions
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#transactions">Les transactions
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#Variables">Les Variables
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#transactions">Les transactions
+                </a>
+              </li>
             </ul>
           
             <!-- Tab panes -->
@@ -3537,80 +3553,351 @@ UPDATE employes SET salaire=1871 WHERE id_employes = 7699;
 
 
 
+              <td><textarea name="" id="" cols="80" rows="5">SELECT a.prenom, COUNT(e.id_livre) AS 'nombre de livre emprunte'
+                FROM abonne a, emprunt e
+                WHERE a.id_abonne=e.id_abonne
+                GROUP BY e.id_abonne;</textarea></td>
+              <td>Ligne 1 - SELECT - Nous selectionnons le champ prenom et comptons le nombre de références id_livre dans la table emprunt (nous aurions pu choisir n'importe quel champ de la table emprunt pour ce calcul). Nous utilisons des préfixes.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <td><textarea name="" id="" cols="80" rows="5">SELECT prenom FROM abonne WHERE id_abonne IN
-                ( SELECT id_abonne FROM emprunt WHERE date_sortie='2014-12-19' ) ;</textarea></td>
-              <td>Explications : La requête entre parenthèse s'exécute en premier et nous sort de la table emprunt les id des abonnés ayant emprunté un livre le 19/12/2014.
-
-              <p>  Ces id sont 1, 3 et 4. Lorsqu'une sous requête est suceptible de sortir plusieurs résultats, il faut prévoir le mot clé IN acceptant plusieurs valeurs, et non pas le signe égal = n'acceptant qu'une seule valeur.</p>
+              <p>  Ligne 2 - FROM - Nous annonçons les tables dont nous aurons besoin pour réussir notre requête, dans notre cas : abonne, emprunt. (nous définissons les préfixes)</p>
                 
-               <p>Ensuite, nous demandons les prénoms des abonnés correspondant aux n° id 1, 3 et 4.</p> 
+               <p>Ligne 3 - WHERE - La condition WHERE permet d'assurer le croisement des données entre la table abonne et la table emprunt. Nous passons par notre champ commun id_abonne.</p> 
+                
+               <p> Ligne 4 - GROUP BY - Cette ligne nous permet de faire des regroupements pour répartir le calcul pour chacun des abonnés.</p>
+                </td>
+            </tr>
+            <tr>
+              <td><textarea name="" id="" cols="80" rows="5">SELECT a.prenom, l.titre, e.date_sortie
+                FROM abonne a, emprunt e, livre l
+                WHERE a.id_abonne=e.id_abonne
+                AND e.id_livre = l.id_livre;</textarea></td>
+              <td>
+                Ligne 1 - SELECT - Nous selectionnons le champ prenom, titre, et date_sortie.
 
+<p> Ligne 2 - FROM - Nous annonçons les tables dont nous aurons besoin pour réussir notre requête, dans notre cas : abonne, livre, emprunt.</p>
+
+<p>Ligne 3 - WHERE - La condition WHERE permet d'assurer le croisement des données entre la table abonne et la table emprunt. Nous passons par notre champ commun id_abonne.</p> 
+
+<p>Ligne 4 - AND - La condition AND permet également d'effectuer une jointure, cette fois-ci entre la table livre et la table emprunt. Nous passons par notre champ commun id_livre.</p> 
               </td>
             </tr>
             <tr>
-              <td><textarea name="" id="" cols="80" rows="5">SELECT prenom FROM abonne WHERE id_abonne IN
-                (SELECT id_abonne FROM emprunt WHERE id_livre IN
-                    (SELECT id_livre FROM livre WHERE auteur='ALPHONSE DAUDET') );</textarea></td>
-              <td>La dernière requête entre parenthèse s'exécute en premier et nous sort de la table livre les id des livres écrits par Alphonse Daudet.
-              <p> SELECT id_livre FROM livre WHERE auteur='ALPHONSE DAUDET';</p> 
-              <p> Le résultat de cette requête est :</p> 
+              <td><textarea name="" id="" cols="80" rows="5">SELECT ab.prenom, em.id_livre
+                FROM abonne ab, emprunt em
+                WHERE ab.id_abonne = em.id_abonne;</textarea></td>
+              <td>
+                
+<p>Ligne 1 - SELECT - Nous selectionnons le champ prenom et id_livre.</p> 
 
+<p> Ligne 2 - FROM - Nous annonçons les tables dont nous aurons besoin pour réussir notre requête, dans notre cas : abonne, emprunt.</p>
+
+<p> Ligne 3 - WHERE - La condition WHERE permet d'assurer le croisement des données entre la table abonne et la table emprunt. Nous passons par notre champ commun id_abonne.</p>
               </td>
             </tr>
             <tr>
-              <td><textarea name="" id="" cols="80" rows="5">SELECT titre FROM livre WHERE id_livre NOT IN
-                (SELECT id_livre FROM emprunt WHERE id_abonne =
-                    (SELECT id_abonne FROM abonne WHERE prenom='chloe') );</textarea></td>
-              <td>La dernière requête entre parenthèse s'exécute en premier et nous sort de la table abonné l'id d'abonné de Chloé (dans le cadre de cet entrainement, nous considérerons qu'il n'y a qu'une seule Chloé).
-               <p>SELECT id_abonne FROM abonne WHERE prenom='chloe';</p> 
-               <p>Le résultat de cette requête est :</p> 
+              <td><textarea name="" id="" cols="80" rows="5">SELECT abonne.prenom, emprunt.id_livre
+                FROM abonne LEFT JOIN emprunt 
+                ON abonne.id_abonne = emprunt.id_abonne;</textarea></td>
+              <td> Ligne 1 - SELECT - Nous selectionnons le champ prenom et id_livre.
 
+              <p>  Ligne 2 - FROM - LEFT JOIN - La table placée à gauche de l'expression LEFT JOIN sera la table dont tous les résultats seront rapatriés (sans correspondance exigée dans l'autre table).</p>
+              <p>  Nous savons qu'Alex fera partie du résultat même s'il n'a pas emprunté de livre.</p>
+                
+               <p>Ligne 3 - ON - La condition se fait par le mot clé ON et non plus WHERE dans le cadre d'une requête externe type LEFT JOIN, RIGHT JOIN (FULL JOIN n'étant pas valable sous Mysql).</p> 
               </td>
             </tr>
-            <tr>
-              <td><textarea name="" id="" cols="80" rows="5">SELECT titre FROM livre WHERE id_livre IN
-                (SELECT id_livre FROM emprunt WHERE date_rendu IS NULL AND id_abonne =
-                    (SELECT id_abonne FROM abonne WHERE prenom='chloe') );</textarea></td>
-              <td> La dernière requête entre parenthèse s'exécute en premier et nous sort de la table abonné l'id d'abonné de Chloé (dans le cadre de cet entrainement, nous considérerons qu'il n'y a qu'une seule Chloé).
-              <p> SELECT id_abonne FROM abonne WHERE prenom='chloe';</p> 
-              <p>  Le résultat de cette requête est :</p>
-
-              </td>
-            </tr>
-            <tr>
-              <td><textarea name="" id="" cols="80" rows="5">SELECT COUNT(*) AS 'nombre de livre' FROM emprunt WHERE id_abonne =
-                (SELECT id_abonne FROM abonne WHERE prenom='guillaume');</textarea></td>
-              <td> La dernière requête entre parenthèse s'exécute en premier et nous sort de la table abonné l'id d'abonné de Guillaume.
-              <p>  SELECT id_abonne FROM abonne WHERE prenom = 'guillaume';</p>
-              <p>  Le résultat de cette requête est :</p>
-
-              </td>
-            </tr>
+         
           </tbody>
         </table>
       </div>
 </div>
 </div>
+<div id="fonctions" class="container-fluid tab-pane fade"><br>
+
+                
+  <div class="row">
+      <div class="col-md-12 col-lg-12">
+          <p class="text-center">Les fonctions
+
+          </p>
+        <div class="d-flex justify-content-center"><img src="img/mysql/3.png" class="img-fluid" style="height: 28;" alt=""></div>
 
 
+      </div>
+</div>
+</div>
+<div id="transactions" class="container-fluid tab-pane fade"><br>
+
+                
+  <div class="row">
+      <div class="col-md-12 col-lg-12">
+          <p class="text-center">Les transactions
+
+
+          </p>
+
+        <p class="text-center my-3">START TRANSACTION permet de démarrer une zone de requête sous réserve de confirmation / annulation.
+
+        </p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Commande</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td ><textarea name="" id="" cols="100" rows="10">
+                START TRANSACTION;
+                SELECT * FROM employes;
+                UPDATE employes SET salaire = 123 WHERE id_employes = 699;
+                SELECT * FROM employes;
+                ROLLBACK; -- ou COMMIT;</textarea></td>
+              <td>
+                START TRANSACTION permet de démarrer une zone de requête sous réserve de confirmation / annulation.
+
+Si nous souhaitons annuler nos requêtes, il nous suffira d'inscrire : ROLLBACK;
+
+Au contraire, si nous souhaitons confirmer nos requêtes, il nous faudra inscrire : COMMIT;
+
+Que l'on choisisse ROLLBACK ou COMMIT, cela TERMINE la transaction, ça veut dire que les prochaines requêtes ne pourront pas être annulées, à moins de remettre un START TRANSACTION.
+              </td>
+            </tr>
+            <tr>
+              <td><textarea name="" id="" cols="100" rows="20">
+                START TRANSACTION;
+ 
+                SELECT * FROM employes;
+                SAVEPOINT point1;
+                 
+                UPDATE employes SET salaire = 1500 WHERE id_employes = 699;
+                SELECT * FROM employes;
+                SAVEPOINT point2;
+                 
+                UPDATE employes SET salaire = 2300 WHERE id_employes = 699;
+                SELECT * FROM employes;
+                SAVEPOINT point3;
+                 
+                UPDATE employes SET salaire = 1400 WHERE id_employes = 699;
+                SELECT * FROM employes;
+                SAVEPOINT point4;
+                 
+                ROLLBACK to point3; -- retour au point3
+                SELECT * FROM employes;
+                ROLLBACK to point4; -- ERREUR
+                ROLLBACK to point1; -- retour au point1
+                 
+                COMMIT; -- Valide et termine la transaction.
+              </textarea></td>
+              <td>
+                SAVEPOINT permet de créer un point de restauration sur lequel nous pourrons revenir plus tard.
+
+               <p>S'il y a 10 points de restauration, je peux revenir au 6e puis ensuite au 3e</p> 
+                
+               <p> Je ne peux pas revenir au 3e et ensuite revenir au 6e (les points doivent être antérieur à l'instant où l'on se trouve).</p></td>
+            </tr>
+        
+          </tbody>
+        </table>
+      </div>
+</div>
+</div>
+<div id="Variables" class="container-fluid tab-pane fade"><br>
+
+                
+  <div class="row">
+      <div class="col-md-12 col-lg-12">
+       <h3 class="text-center">Les Variables</h3> 
+
+
+         
+
+       <pre class="">                                            Une variable est un espace nommé permettant de conserver une valeur.
+
+                                                                    Il existe 3 types de variables :
+                                                                           -Les variables systèmes (prévu par le langage)
+        
+                                                                           -Les variables de portée globale (défini par le développeur)
+        
+                                                                          -Les variables de portée locale (défini par le développeur dans le cadre de fonction ou procédure stockée)</pre>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Commande</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td ><textarea name="" id="" cols="150" rows="10">
+                SHOW VARIABLES ; -- permet d'observer les variables système
+ 
+                SELECT @@version; -- les variables système comporte un double arrobase @@
+                 
+                SET @ecole = "Mon Ecole"; -- Affectation d'une variable.
+                SELECT @ecole; -- Affichage du contenu de la variable. Les variables globales comportent un seul arrobase @.
+                 
+                -- SET pays = "France"; SELECT pays; -- les variables locales (dans le cadre de fonction ou procédure) ne comportent pas d'arrobase @.</textarea></td>
+              <td>
+              </td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+</div>
+</div>
+<div id="transactions" class="container-fluid tab-pane fade"><br>
+
+                
+  <div class="row">
+      <div class="col-md-12 col-lg-12">
+          <p class="text-center">Les transactions
+
+
+          </p>
+
+        <p class="text-center my-3">START TRANSACTION permet de démarrer une zone de requête sous réserve de confirmation / annulation.
+
+        </p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Commande</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td ><textarea name="" id="" cols="100" rows="10">
+                START TRANSACTION;
+                SELECT * FROM employes;
+                UPDATE employes SET salaire = 123 WHERE id_employes = 699;
+                SELECT * FROM employes;
+                ROLLBACK; -- ou COMMIT;</textarea></td>
+              <td>
+                START TRANSACTION permet de démarrer une zone de requête sous réserve de confirmation / annulation.
+
+Si nous souhaitons annuler nos requêtes, il nous suffira d'inscrire : ROLLBACK;
+
+Au contraire, si nous souhaitons confirmer nos requêtes, il nous faudra inscrire : COMMIT;
+
+Que l'on choisisse ROLLBACK ou COMMIT, cela TERMINE la transaction, ça veut dire que les prochaines requêtes ne pourront pas être annulées, à moins de remettre un START TRANSACTION.
+              </td>
+            </tr>
+            <tr>
+              <td><textarea name="" id="" cols="100" rows="20">
+                START TRANSACTION;
+ 
+                SELECT * FROM employes;
+                SAVEPOINT point1;
+                 
+                UPDATE employes SET salaire = 1500 WHERE id_employes = 699;
+                SELECT * FROM employes;
+                SAVEPOINT point2;
+                 
+                UPDATE employes SET salaire = 2300 WHERE id_employes = 699;
+                SELECT * FROM employes;
+                SAVEPOINT point3;
+                 
+                UPDATE employes SET salaire = 1400 WHERE id_employes = 699;
+                SELECT * FROM employes;
+                SAVEPOINT point4;
+                 
+                ROLLBACK to point3; -- retour au point3
+                SELECT * FROM employes;
+                ROLLBACK to point4; -- ERREUR
+                ROLLBACK to point1; -- retour au point1
+                 
+                COMMIT; -- Valide et termine la transaction.
+              </textarea></td>
+              <td>
+                SAVEPOINT permet de créer un point de restauration sur lequel nous pourrons revenir plus tard.
+
+               <p>S'il y a 10 points de restauration, je peux revenir au 6e puis ensuite au 3e</p> 
+                
+               <p> Je ne peux pas revenir au 3e et ensuite revenir au 6e (les points doivent être antérieur à l'instant où l'on se trouve).</p></td>
+            </tr>
+            <tr>
+              <td><textarea name="" id="" cols="80" rows="7">SELECT a.prenom
+                FROM abonne a, emprunt e, livre l
+                WHERE l.id_livre = e.id_livre
+                AND e.id_abonne = a.id_abonne
+                AND l.titre = 'Une vie'
+                AND e.date_sortie LIKE '2014%';</textarea></td>
+                <td> Ligne 1 - SELECT - Nous selectionnons les champs que nous souhaitons obtenir dans le résultat : prenom (nous utilisons des préfixes)
+              <p>  Ligne 2 - FROM - Nous annonçons les tables dont nous aurons besoin pour réussir notre requête, dans notre cas : abonne, livre, emprunt. (nous définissons les préfixes)</p>
+              <p> Ligne 3 - WHERE - La condition WHERE permet d'assurer le croisement des données entre la table livre et la table emprunt. Nous passons par notre champ commun id_livre.</p> 
+             <p>   Ligne 4 - AND - La condition AND permet également d'effectuer une jointure, cette fois-ci entre la table abonne et la table emprunt. Nous passons par notre champ commun id_abonne.</p>
+              <p>  Ligne 5 - AND - La condition AND permet de cibler le livre ayant pour titre "Une vie" (conformément à la demande de départ).</p>
+             <p>   Ligne 6 - AND - La condition AND permet de cibler la date de sortie à l'année 2014 (conformément à la demande de départ).</p>
+              </td>
+            </tr>
+            <tr>  
+
+
+
+
+              <td><textarea name="" id="" cols="80" rows="5">SELECT a.prenom, COUNT(e.id_livre) AS 'nombre de livre emprunte'
+                FROM abonne a, emprunt e
+                WHERE a.id_abonne=e.id_abonne
+                GROUP BY e.id_abonne;</textarea></td>
+              <td>Ligne 1 - SELECT - Nous selectionnons le champ prenom et comptons le nombre de références id_livre dans la table emprunt (nous aurions pu choisir n'importe quel champ de la table emprunt pour ce calcul). Nous utilisons des préfixes.
+
+              <p>  Ligne 2 - FROM - Nous annonçons les tables dont nous aurons besoin pour réussir notre requête, dans notre cas : abonne, emprunt. (nous définissons les préfixes)</p>
+                
+               <p>Ligne 3 - WHERE - La condition WHERE permet d'assurer le croisement des données entre la table abonne et la table emprunt. Nous passons par notre champ commun id_abonne.</p> 
+                
+               <p> Ligne 4 - GROUP BY - Cette ligne nous permet de faire des regroupements pour répartir le calcul pour chacun des abonnés.</p>
+                </td>
+            </tr>
+            <tr>
+              <td><textarea name="" id="" cols="80" rows="5">SELECT a.prenom, l.titre, e.date_sortie
+                FROM abonne a, emprunt e, livre l
+                WHERE a.id_abonne=e.id_abonne
+                AND e.id_livre = l.id_livre;</textarea></td>
+              <td>
+                Ligne 1 - SELECT - Nous selectionnons le champ prenom, titre, et date_sortie.
+
+<p> Ligne 2 - FROM - Nous annonçons les tables dont nous aurons besoin pour réussir notre requête, dans notre cas : abonne, livre, emprunt.</p>
+
+<p>Ligne 3 - WHERE - La condition WHERE permet d'assurer le croisement des données entre la table abonne et la table emprunt. Nous passons par notre champ commun id_abonne.</p> 
+
+<p>Ligne 4 - AND - La condition AND permet également d'effectuer une jointure, cette fois-ci entre la table livre et la table emprunt. Nous passons par notre champ commun id_livre.</p> 
+              </td>
+            </tr>
+            <tr>
+              <td><textarea name="" id="" cols="80" rows="5">SELECT ab.prenom, em.id_livre
+                FROM abonne ab, emprunt em
+                WHERE ab.id_abonne = em.id_abonne;</textarea></td>
+              <td>
+                
+<p>Ligne 1 - SELECT - Nous selectionnons le champ prenom et id_livre.</p> 
+
+<p> Ligne 2 - FROM - Nous annonçons les tables dont nous aurons besoin pour réussir notre requête, dans notre cas : abonne, emprunt.</p>
+
+<p> Ligne 3 - WHERE - La condition WHERE permet d'assurer le croisement des données entre la table abonne et la table emprunt. Nous passons par notre champ commun id_abonne.</p>
+              </td>
+            </tr>
+            <tr>
+              <td><textarea name="" id="" cols="80" rows="5">SELECT abonne.prenom, emprunt.id_livre
+                FROM abonne LEFT JOIN emprunt 
+                ON abonne.id_abonne = emprunt.id_abonne;</textarea></td>
+              <td> Ligne 1 - SELECT - Nous selectionnons le champ prenom et id_livre.
+
+              <p>  Ligne 2 - FROM - LEFT JOIN - La table placée à gauche de l'expression LEFT JOIN sera la table dont tous les résultats seront rapatriés (sans correspondance exigée dans l'autre table).</p>
+              <p>  Nous savons qu'Alex fera partie du résultat même s'il n'a pas emprunté de livre.</p>
+                
+               <p>Ligne 3 - ON - La condition se fait par le mot clé ON et non plus WHERE dans le cadre d'une requête externe type LEFT JOIN, RIGHT JOIN (FULL JOIN n'étant pas valable sous Mysql).</p> 
+              </td>
+            </tr>
+         
+          </tbody>
+        </table>
+      </div>
+</div>
+</div>
 
 
 
